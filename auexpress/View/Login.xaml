@@ -1,0 +1,43 @@
+﻿<Controls:MetroWindow x:Class="auexpress.view.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="澳速通国际物流本地管理系统" Height="264" Width="399" 
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" 
+        Icon="/auexpress;component/Resources/logo.png">
+    <Window.Resources>
+        <Style x:Key="fontStyle">
+            <Setter Property="TextElement.FontFamily" Value="Resources/font#微软雅黑"/>
+            <Setter Property="TextElement.FontSize" Value="14"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+
+        <!--定义行-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
+        <!--定义列-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="93*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="196*"/>
+            <ColumnDefinition Width="79*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="1"  Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="11,11,25,11">澳速通国际物流</Label>
+        <Label Style="{DynamicResource fontStyle}" Grid.Column="0" Grid.Row="1" Height="30"   HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.ColumnSpan="2" >用户名：</Label>
+        <TextBox Controls:TextBoxHelper.Watermark="请输入用户名" Grid.Column="2" Text="{Binding UserName}" x:Name="UserName"   Grid.Row="1" Height="30"  VerticalContentAlignment="Center" MaxLength="15" ></TextBox>
+        <Label Style="{DynamicResource fontStyle}" Grid.Column="0" Grid.Row="2" Height="30"  HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.ColumnSpan="2">密码：</Label>
+        <PasswordBox Controls:TextBoxHelper.Watermark="请输入密码" Grid.Column="2" x:Name="PassWord" Grid.Row="2" Height="30"  VerticalContentAlignment="Center" MaxLength="15"/>
+        <Button Style="{DynamicResource fontStyle}"  Grid.Row="3" Grid.Column="2" Command="{Binding UserLoginCommand}" CommandParameter="{Binding  ElementName=PassWord}" >登录</Button>
+        <Canvas x:Name="loadingBack" Grid.ColumnSpan="5" Grid.RowSpan="4" Width="405" Height="264"   Background="Wheat"  Panel.ZIndex="2" Opacity="0.3" Visibility="Collapsed">
+        </Canvas>
+        <Controls:ProgressRing x:Name="loadingImg" Grid.RowSpan="5" Tag="ces" Grid.ColumnSpan="4"   Foreground="{DynamicResource AccentColorBrush}" Panel.ZIndex="4" HorizontalAlignment="Center" Visibility="Visible" IsActive="False" />
+    </Grid>
+</Controls:MetroWindow>
+

@@ -1,0 +1,214 @@
+﻿<Page x:Class="auexpress.View.EditInfo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" Height="auto"
+	Title="EditInfo">
+
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="400*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <!--客户业务录单-->
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition  Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" VerticalAlignment="Center" Margin="10,0,0,0">客户业务单录入：</Label>
+            <DockPanel Grid.Row="1" Margin="10,0">
+                <TextBlock  Width="70" TextAlignment="Right" HorizontalAlignment="Center" VerticalAlignment="Center">快递类别：</TextBlock>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <ComboBox Width="150">
+                        <ComboBoxItem IsSelected="True">澳速通国际物流</ComboBoxItem>
+                        <ComboBoxItem>顺丰</ComboBoxItem>
+                        <ComboBoxItem>顺丰</ComboBoxItem>
+                        <ComboBoxItem>顺丰</ComboBoxItem>
+                        <ComboBoxItem>顺丰</ComboBoxItem>
+                    </ComboBox>
+                </TextBlock>
+                <TextBlock TextAlignment="Right" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0"> 运单号：</TextBlock>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"><TextBox Width="200"/></TextBlock>
+            </DockPanel>
+            <DockPanel Grid.Row="2" Margin="10,0">
+                <TextBlock   Width="70" TextAlignment="Right"  HorizontalAlignment="Center" VerticalAlignment="Center">目的地址：</TextBlock>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"><TextBox Width="150"/></TextBlock>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0">
+                    <ComboBox >
+                        <ComboBoxItem IsSelected="True">包裹PAK</ComboBoxItem>
+                        <ComboBoxItem>文件DOC</ComboBoxItem> 
+                    </ComboBox>
+                </TextBlock>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"><TextBox Width="50"/></TextBlock>
+                <TextBlock TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Center" >件</TextBlock>
+            </DockPanel>
+            <DockPanel Grid.Row="3" Margin="10,0">
+                <TextBlock   Width="70" TextAlignment="Right"  HorizontalAlignment="Center" VerticalAlignment="Center">重量：</TextBlock>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBox Width="150"/>
+                </TextBlock>
+                <TextBlock TextAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,0,0">KG</TextBlock>
+                <TextBlock TextAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15,0,0,0">体积：</TextBlock>
+                <TextBlock TextAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,0,0">长</TextBlock>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"><TextBox Width="40"/></TextBlock>
+                <TextBlock TextAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,0,0">*宽</TextBlock>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"><TextBox Width="40"/></TextBlock>
+                <TextBlock TextAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,0,0">*高</TextBlock>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"><TextBox Width="40"/></TextBlock>
+                <TextBlock TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0">厘米</TextBlock>
+            </DockPanel>
+        </Grid>
+
+        <!--收件人信息-->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock TextAlignment="Right" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100" >收件人信息：</TextBlock>
+            <TextBlock TextAlignment="Right" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100"  Grid.Row="0" Grid.Column="1">发件人信息：</TextBlock>
+            <TextBlock Width="100" TextAlignment="Right" VerticalAlignment="Center" HorizontalAlignment="Left"  Grid.Row="1" Grid.Column="0">收件人姓名：</TextBlock>
+            <TextBlock Width="100" TextAlignment="Right"  VerticalAlignment="Center" HorizontalAlignment="Left"  Grid.Row="2" Grid.Column="0">收件人单位：</TextBlock>
+            <TextBlock Width="100" TextAlignment="Right"  VerticalAlignment="Center" HorizontalAlignment="Left"  Grid.Row="3" Grid.Column="0">收件人手机号码：</TextBlock>
+            <TextBlock Width="100" TextAlignment="Right"  VerticalAlignment="Center" HorizontalAlignment="Left"  Grid.Row="4" Grid.Column="0">详细地址：</TextBlock>
+            <TextBlock Width="100" TextAlignment="Right"  VerticalAlignment="Center" HorizontalAlignment="Left"  Grid.Row="5" Grid.Column="0">邮 编：</TextBlock>
+            <TextBlock Width="50" TextAlignment="Right"  VerticalAlignment="Center" HorizontalAlignment="Left"  Grid.Row="5" Grid.Column="0" Margin="160,0,0,0" >国 家：</TextBlock>
+            <TextBlock Width="100" TextAlignment="Right"  VerticalAlignment="Center" HorizontalAlignment="Left"  Grid.Row="6" Grid.Column="0">省/州：</TextBlock>
+            <TextBlock Width="50" TextAlignment="Right"  VerticalAlignment="Center" HorizontalAlignment="Left"  Grid.Row="6" Grid.Column="0" Margin="160,0,0,0" >城 市：</TextBlock>
+
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="100,0,0,0" Grid.Row="1" Grid.Column="0"><TextBox Width="170"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="100,0,0,0" Grid.Row="2" Grid.Column="0"><TextBox Width="170"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="100,0,0,0" Grid.Row="3" Grid.Column="0"><TextBox Width="170"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="100,0,0,0" Grid.Row="4" Grid.Column="0"><TextBox Width="170"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="100,0,0,0"  Grid.Row="5" Grid.Column="0"><TextBox Width="60"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="210,0,0,0"  Grid.Row="5" Grid.Column="0"><TextBox Width="60"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="100,0,0,0"  Grid.Row="6" Grid.Column="0"><TextBox Width="60"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="210,0,0,0"  Grid.Row="6" Grid.Column="0"><TextBox Width="60"/></TextBlock>
+
+            <TextBlock Width="100" TextAlignment="Right" VerticalAlignment="Center" HorizontalAlignment="Left"  Grid.Row="1" Grid.Column="1">发件人姓名：</TextBlock>
+            <TextBlock Width="100" TextAlignment="Right"  VerticalAlignment="Center" HorizontalAlignment="Left"  Grid.Row="2" Grid.Column="1">发件人单位：</TextBlock>
+            <TextBlock Width="100" TextAlignment="Right"  VerticalAlignment="Center" HorizontalAlignment="Left"  Grid.Row="3" Grid.Column="1">发件人电话：</TextBlock>
+            <TextBlock Width="100" TextAlignment="Right"  VerticalAlignment="Center" HorizontalAlignment="Left"  Grid.Row="4" Grid.Column="1">详细地址：</TextBlock>
+            <TextBlock Width="100" TextAlignment="Right"  VerticalAlignment="Center" HorizontalAlignment="Left"  Grid.Row="5" Grid.Column="1">邮 编：</TextBlock>
+            <TextBlock Width="50" TextAlignment="Right"  VerticalAlignment="Center" HorizontalAlignment="Left"  Grid.Row="5" Grid.Column="1" Margin="160,0,0,0" >国 家：</TextBlock>
+            <TextBlock Width="100" TextAlignment="Right"  VerticalAlignment="Center" HorizontalAlignment="Left"  Grid.Row="6" Grid.Column="1">省/州：</TextBlock>
+            <TextBlock Width="50" TextAlignment="Right"  VerticalAlignment="Center" HorizontalAlignment="Left"  Grid.Row="6" Grid.Column="1" Margin="160,0,0,0" >城 市：</TextBlock>
+
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="100,0,0,0" Grid.Row="1" Grid.Column="1"><TextBox Width="170"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="100,0,0,0" Grid.Row="2" Grid.Column="1"><TextBox Width="170"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="100,0,0,0" Grid.Row="3" Grid.Column="1"><TextBox Width="170"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="100,0,0,0" Grid.Row="4" Grid.Column="1"><TextBox Width="170"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="100,0,0,0"  Grid.Row="5" Grid.Column="1"><TextBox Width="60"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="210,0,0,0"  Grid.Row="5" Grid.Column="1"><TextBox Width="60"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="100,0,0,0"  Grid.Row="6" Grid.Column="1"><TextBox Width="60"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="210,0,0,0"  Grid.Row="6" Grid.Column="1"><TextBox Width="60"/></TextBlock>
+
+        </Grid>
+
+        <!--货品列表-->
+        <Grid Grid.Row="2" Height="auto">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="201*"/>
+                <ColumnDefinition Width="176*"/>
+                <ColumnDefinition Width="102*"/>
+                <ColumnDefinition Width="113*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.ColumnSpan="4" VerticalAlignment="Center">您要发运什么？</Label>
+            <Label Grid.Row="1" Grid.Column="0"  HorizontalAlignment="Left" VerticalAlignment="Bottom">中文品名</Label>
+            <Label Grid.Row="1" Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Bottom">英文品名</Label>
+            <Label Grid.Row="1" Grid.Column="2"  HorizontalAlignment="Left" VerticalAlignment="Bottom">物品数量</Label>
+            <Label Grid.Row="1" Grid.Column="3"  HorizontalAlignment="Left" VerticalAlignment="Bottom">单价(CNY)</Label>
+            <Label Grid.Row="2" Grid.Column="0"  HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBox Width="150"/>
+            </Label>
+            <Label Grid.Row="2" Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBox Width="150"/>
+            </Label>
+            <Label Grid.Row="2" Grid.Column="2"  HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBox Width="60"/>
+            </Label>
+            <Label Grid.Row="2" Grid.Column="3"  HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBox Width="60"/>
+            </Label>
+            <Button Grid.Row="3" Grid.Column="0" Height="30" Width="100" HorizontalAlignment="Left">添加多件物品信息</Button>
+            <DockPanel Height="30" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4">
+                <Label HorizontalAlignment="Left" VerticalAlignment="Center" Width="70" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">声明价：</Label>
+                <TextBox  VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="20" Width="200"/>
+            </DockPanel>
+            <Label Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Width="70">托运备注：</Label>
+            <TextBox
+                TextWrapping="Wrap"
+  AcceptsReturn="True"
+  VerticalScrollBarVisibility="Visible"
+                Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Center" Width="200" Height="50" Margin="70,0,0,0"/>
+        </Grid>
+        
+        <!--付款-->
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="110"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0">
+                您希望如何付款 ？
+            </Label>
+            <DockPanel Grid.Column="1">
+                <RadioButton IsChecked="True">现付</RadioButton>
+                <RadioButton>到付</RadioButton>
+            </DockPanel>
+            
+        </Grid>
+
+        <!--条款-->
+        <DockPanel Grid.Row="4" Margin="0,10,0,0" >
+            <TextBlock MaxWidth="580" TextWrapping="Wrap">
+              By clicking on the button below, you agree to our Terms and Conditions 在点击以下按钮以前请阅读 承运条款 ，一旦您生成了此运单就表示您已阅读过此承运条款，并同意条款的所有内容。
+            </TextBlock>
+        </DockPanel>
+
+        <!--按钮-->
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Width="80" Height="30">提交运单</Button>
+            </TextBlock>
+            <TextBlock  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Width="80" Height="30">重新输入</Button>
+            </TextBlock>
+            <TextBlock  Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Width="80" Height="30">删除本条</Button>
+            </TextBlock>
+        </Grid>
+        
+    </Grid>
+</Page>
