@@ -80,7 +80,7 @@ namespace auexpress.ViewModel
 
             try
             {
-                var pageContent = network.getApi("http://api.au-express.com:8080/auexpress-api/index", dc);
+                var pageContent = network.getApi("http://127.0.0.1:8080/index", dc);
                 LoginPage lp = pageContent.JsonToObject<LoginPage>();
                 if (!lp.result)
                 {

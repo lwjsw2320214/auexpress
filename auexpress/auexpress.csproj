@@ -87,7 +87,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="model\AppGlobal.cs" />
-    <Compile Include="model\Express..cs" />
+    <Compile Include="model\Express.cs" />
     <Compile Include="model\RecPreInputPage.cs" />
     <Compile Include="model\User.cs" />
     <Compile Include="model\LoginPage.cs" />
