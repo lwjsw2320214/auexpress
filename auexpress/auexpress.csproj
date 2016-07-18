@@ -86,15 +86,22 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="model\AppGlobal.cs" />
-    <Compile Include="model\Express.cs" />
-    <Compile Include="model\RecPreInputPage.cs" />
-    <Compile Include="model\User.cs" />
-    <Compile Include="model\LoginPage.cs" />
+    <Compile Include="Model\AjaxExpressType.cs" />
+    <Compile Include="Model\AppGlobal.cs" />
+    <Compile Include="Model\Express.cs" />
+    <Compile Include="Model\ExpressType.cs" />
+    <Compile Include="Model\RecPreInputPage.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\LoginPage.cs" />
+    <Compile Include="Service\BaseService.cs" />
+    <Compile Include="Service\ExpressService.cs" />
+    <Compile Include="Service\WaybillProcessingService.cs" />
     <Compile Include="Utils\ContentNetWork.cs" />
     <Compile Include="Utils\EncryptionCommen.cs" />
     <Compile Include="Utils\PapgeEnum.cs" />
     <Compile Include="Utils\StringExtension.cs" />
+    <Compile Include="ViewModel\EditInfoViewModel.cs" />
+    <Compile Include="ViewModel\EditMenuItemViewModel.cs" />
     <Compile Include="ViewModel\ExpressMenuItemViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
@@ -211,6 +218,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

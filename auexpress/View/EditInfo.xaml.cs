@@ -1,4 +1,5 @@
-﻿using System;
+﻿using auexpress.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,14 @@ namespace auexpress.View
     /// </summary>
     public partial class EditInfo : Page
     {
+
+        private EditInfoViewModel editInfoViewModel = new EditInfoViewModel();
+
         public EditInfo()
         {
             InitializeComponent();
+
+            this.DataContext = editInfoViewModel;
         }
     }
 }

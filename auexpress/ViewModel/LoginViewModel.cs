@@ -66,6 +66,7 @@ namespace auexpress.ViewModel
             if (String.IsNullOrEmpty(this.UserName)||String.IsNullOrEmpty(PassWord))
             {
                 TriggerLoginSend(false, "用户名和密码不能为空"); 
+
                 return;
             }
 
@@ -76,21 +77,29 @@ namespace auexpress.ViewModel
             Dictionary<string, object> dc = new Dictionary<string, object>();
 
             dc.Add("username", this.UserName);
+
             dc.Add("password", encryptPassWord);
 
             try
             {
                 var pageContent = network.getApi("http://127.0.0.1:8080/index", dc);
+
                 LoginPage lp = pageContent.JsonToObject<LoginPage>();
-                if (!lp.result)
-                {
+
+                if (!lp.result) {
+
                     TriggerLoginSend(lp.result, "用户名或者密码错误！");
+
                     return;
                 }
+
                 AppGlobal.user = lp.obj;
             }
             catch (Exception e) { 
+
                 TriggerLoginSend(false, "网络连接错误！");
+
+                return;
             }
              
             TriggerLoginSend(true, ""); 

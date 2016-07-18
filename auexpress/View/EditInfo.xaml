@@ -27,12 +27,12 @@
             <DockPanel Grid.Row="1" Margin="10,0">
                 <TextBlock  Width="70" TextAlignment="Right" HorizontalAlignment="Center" VerticalAlignment="Center">快递类别：</TextBlock>
                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <ComboBox Width="150">
-                        <ComboBoxItem IsSelected="True">澳速通国际物流</ComboBoxItem>
-                        <ComboBoxItem>顺丰</ComboBoxItem>
-                        <ComboBoxItem>顺丰</ComboBoxItem>
-                        <ComboBoxItem>顺丰</ComboBoxItem>
-                        <ComboBoxItem>顺丰</ComboBoxItem>
+                    <ComboBox Width="150" ItemsSource="{Binding EditInfoMenu}">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding ExpressType.cemskind}"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
                     </ComboBox>
                 </TextBlock>
                 <TextBlock TextAlignment="Right" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0"> 运单号：</TextBlock>

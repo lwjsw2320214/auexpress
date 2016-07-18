@@ -1,4 +1,5 @@
 ﻿using auexpress.model;
+using auexpress.Service;
 using auexpress.Utils;
 using Microsoft.Practices.Prism.Commands;
 using Microsoft.Practices.Prism.ViewModel;
@@ -11,6 +12,9 @@ namespace auexpress.ViewModel
 {
     public class WaybillProcessingViewModel : NotificationObject
     {
+
+        private WaybillProcessingService waybillProcessingService = new WaybillProcessingService();
+         
         public delegate void EditEventDelegate();
 
         public event EditEventDelegate EditShow;
@@ -76,14 +80,13 @@ namespace auexpress.ViewModel
         /// <summary>
         /// 初始化数据 
         /// </summary>
-        private void LoadExpressMenu() {
-            ContentNetWork network = new ContentNetWork();
+        private void LoadExpressMenu() { 
+
             Dictionary<string, object> dc = new Dictionary<string, object>();
             dc.Add("icid", 10);
             dc.Add("irid", 0);
             dc.Add("page", 1);
-            var pageCount = network.getApi("http://127.0.0.1:8080/recPreInput", dc);
-           var Count= pageCount.JsonToObject<RecPreInputPage>();
+            var Count = waybillProcessingService.LoadExpressMenu(dc); 
             this.ExpressMenu = new List<ExpressMenuItemViewModel>();
             if (Count.result) {
                 foreach (var item in Count.obj)
@@ -98,15 +101,14 @@ namespace auexpress.ViewModel
               }
 
             this.PageCount = Count.pageCount;
-            this.PageSize = Count.page;
+            this.PageSize = Count.page; 
         }
 
         /// <summary>
         /// 首页
         /// </summary>
         private void HomePage()
-        {
-
+        { 
             this.PageSize = 1;
 
             ContentNetWork network = new ContentNetWork();
@@ -114,8 +116,7 @@ namespace auexpress.ViewModel
             dc.Add("icid", 10);
             dc.Add("irid", 0);
             dc.Add("page", this.PageSize);
-            var pageCount = network.getApi("http://127.0.0.1:8080/recPreInput", dc);
-            var Count = pageCount.JsonToObject<RecPreInputPage>();
+            var Count = waybillProcessingService.GetPage(dc);
             this.ExpressMenu = new List<ExpressMenuItemViewModel>();
             if (Count.result)
             {
@@ -154,9 +155,8 @@ namespace auexpress.ViewModel
             Dictionary<string, object> dc = new Dictionary<string, object>();
             dc.Add("icid", 10);
             dc.Add("irid", 0);
-            dc.Add("page", this.PageSize);
-            var pageCount = network.getApi("http://127.0.0.1:8080/recPreInput", dc);
-            var Count = pageCount.JsonToObject<RecPreInputPage>();
+            dc.Add("page", this.PageSize); 
+            var Count = waybillProcessingService.GetPage(dc);
             this.ExpressMenu = new List<ExpressMenuItemViewModel>();
             if (Count.result)
             {
@@ -194,8 +194,7 @@ namespace auexpress.ViewModel
             dc.Add("icid", 10);
             dc.Add("irid", 0);
             dc.Add("page", this.PageSize);
-            var pageCount = network.getApi("http://127.0.0.1:8080/recPreInput", dc);
-            var Count = pageCount.JsonToObject<RecPreInputPage>();
+            var Count = waybillProcessingService.GetPage(dc);
             this.ExpressMenu = new List<ExpressMenuItemViewModel>();
             if (Count.result)
             {
@@ -226,8 +225,7 @@ namespace auexpress.ViewModel
             dc.Add("icid", 10);
             dc.Add("irid", 0);
             dc.Add("page", this.PageSize);
-            var pageCount = network.getApi("http://127.0.0.1:8080/recPreInput", dc);
-            var Count = pageCount.JsonToObject<RecPreInputPage>();
+            var Count = waybillProcessingService.GetPage(dc);
             this.ExpressMenu = new List<ExpressMenuItemViewModel>();
             if (Count.result)
             {
