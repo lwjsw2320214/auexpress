@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="auexpress-api:war">
+    <output-path>G:/auexpressapi/auexpress/target</output-path>
+    <root id="archive" name="auexpress-api.war">
+      <element id="artifact" artifact-name="auexpress-api:war exploded" />
+    </root>
+  </artifact>
+</component>
