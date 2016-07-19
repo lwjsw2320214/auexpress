@@ -10,7 +10,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="180"/>
             <RowDefinition Height="300"/>
-            <RowDefinition Height="400*"/>
+            <RowDefinition/>
+            <RowDefinition Height="100*"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="60"/>
             <RowDefinition Height="60"/>
@@ -26,13 +27,9 @@
             <Label Grid.Row="0" VerticalAlignment="Center" Margin="10,0,0,0">客户业务单录入：</Label>
             <DockPanel Grid.Row="1" Margin="10,0">
                 <TextBlock  Width="70" TextAlignment="Right" HorizontalAlignment="Center" VerticalAlignment="Center">快递类别：</TextBlock>
-                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <ComboBox Width="150" ItemsSource="{Binding EditInfoMenu}">
-                        <ComboBox.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding ExpressType.cemskind}"/>
-                            </DataTemplate>
-                        </ComboBox.ItemTemplate>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"> 
+                    <ComboBox Width="150" ItemsSource="{Binding EditInfoMenu}" SelectedValuePath="ExpressType.cemskind" DisplayMemberPath="ExpressType.cemskind">
+                        
                     </ComboBox>
                 </TextBlock>
                 <TextBlock TextAlignment="Right" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0"> 运单号：</TextBlock>
@@ -124,14 +121,12 @@
         </Grid>
 
         <!--货品列表-->
-        <Grid Grid.Row="2" Height="auto">
+        <Grid Grid.Row="2" Height="auto" x:Name="addui">
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
                 <RowDefinition Height="25"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="60"/>
+                <RowDefinition Height="40"/> 
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="201*"/>
@@ -140,37 +135,52 @@
                 <ColumnDefinition Width="113*"/>
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.ColumnSpan="4" VerticalAlignment="Center">您要发运什么？</Label>
-            <Label Grid.Row="1" Grid.Column="0"  HorizontalAlignment="Left" VerticalAlignment="Bottom">中文品名</Label>
-            <Label Grid.Row="1" Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Bottom">英文品名</Label>
-            <Label Grid.Row="1" Grid.Column="2"  HorizontalAlignment="Left" VerticalAlignment="Bottom">物品数量</Label>
-            <Label Grid.Row="1" Grid.Column="3"  HorizontalAlignment="Left" VerticalAlignment="Bottom">单价(CNY)</Label>
-            <Label Grid.Row="2" Grid.Column="0"  HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Button x:Name="addbutton" Grid.Row="1" Grid.Column="0" Command="{Binding AddUICommand}" Height="30" Width="100" HorizontalAlignment="Left">添加多件物品信息</Button>
+            <Label Grid.Row="2" Grid.Column="0"  HorizontalAlignment="Left" VerticalAlignment="Bottom">中文品名</Label>
+            <Label Grid.Row="2" Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Bottom">英文品名</Label>
+            <Label Grid.Row="2" Grid.Column="2"  HorizontalAlignment="Left" VerticalAlignment="Bottom">物品数量</Label>
+            <Label Grid.Row="2" Grid.Column="3"  HorizontalAlignment="Left" VerticalAlignment="Bottom">单价(CNY)</Label>
+            <Label Grid.Row="3" Grid.Column="0"  HorizontalAlignment="Left" VerticalAlignment="Center">
                 <TextBox Width="150"/>
             </Label>
-            <Label Grid.Row="2" Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Label Grid.Row="3" Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Center">
                 <TextBox Width="150"/>
             </Label>
-            <Label Grid.Row="2" Grid.Column="2"  HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Label Grid.Row="3" Grid.Column="2"  HorizontalAlignment="Left" VerticalAlignment="Center">
                 <TextBox Width="60"/>
             </Label>
-            <Label Grid.Row="2" Grid.Column="3"  HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Label Grid.Row="3" Grid.Column="3"  HorizontalAlignment="Left" VerticalAlignment="Center">
                 <TextBox Width="60"/>
             </Label>
-            <Button Grid.Row="3" Grid.Column="0" Height="30" Width="100" HorizontalAlignment="Left">添加多件物品信息</Button>
-            <DockPanel Height="30" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4">
+          
+        </Grid>
+
+        <!--s声明-->
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <DockPanel Height="30" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">
                 <Label HorizontalAlignment="Left" VerticalAlignment="Center" Width="70" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">声明价：</Label>
                 <TextBox  VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="20" Width="200"/>
             </DockPanel>
-            <Label Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Width="70">托运备注：</Label>
+            <Label Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="70">托运备注：</Label>
             <TextBox
                 TextWrapping="Wrap"
   AcceptsReturn="True"
   VerticalScrollBarVisibility="Visible"
-                Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Center" Width="200" Height="50" Margin="70,0,0,0"/>
+                Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Center" Width="200" Height="50" Margin="70,0,0,0"/>
+
         </Grid>
-        
+
         <!--付款-->
-        <Grid Grid.Row="3">
+        <Grid Grid.Row="4">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="110"/>
                 <ColumnDefinition/>
@@ -182,18 +192,18 @@
                 <RadioButton IsChecked="True">现付</RadioButton>
                 <RadioButton>到付</RadioButton>
             </DockPanel>
-            
+
         </Grid>
 
         <!--条款-->
-        <DockPanel Grid.Row="4" Margin="0,10,0,0" >
+        <DockPanel Grid.Row="5" Margin="0,10,0,0" >
             <TextBlock MaxWidth="580" TextWrapping="Wrap">
               By clicking on the button below, you agree to our Terms and Conditions 在点击以下按钮以前请阅读 承运条款 ，一旦您生成了此运单就表示您已阅读过此承运条款，并同意条款的所有内容。
             </TextBlock>
         </DockPanel>
 
         <!--按钮-->
-        <Grid Grid.Row="5">
+        <Grid Grid.Row="6">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -209,6 +219,6 @@
             <Button Width="80" Height="30">删除本条</Button>
             </TextBlock>
         </Grid>
-        
+
     </Grid>
 </Page>

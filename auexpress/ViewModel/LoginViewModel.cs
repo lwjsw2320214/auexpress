@@ -95,7 +95,7 @@ namespace auexpress.ViewModel
 
                 AppGlobal.user = lp.obj;
             }
-            catch (Exception e) { 
+            catch{ 
 
                 TriggerLoginSend(false, "网络连接错误！");
 

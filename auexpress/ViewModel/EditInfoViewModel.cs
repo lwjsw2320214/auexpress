@@ -1,4 +1,5 @@
 ﻿using auexpress.Service;
+using Microsoft.Practices.Prism.Commands;
 using Microsoft.Practices.Prism.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -10,11 +11,12 @@ namespace auexpress.ViewModel
     public class EditInfoViewModel : NotificationObject 
     {
 
+        public delegate void AddUIdelegate();
+        public event AddUIdelegate AddUIEvent;
+
         private ExpressService expressService = new ExpressService();
 
-
         private List<EditMenuItemViewModel> editInfoMenu;
-
         public List<EditMenuItemViewModel> EditInfoMenu
         {
             get { return editInfoMenu; }
@@ -24,12 +26,13 @@ namespace auexpress.ViewModel
             }
         }
 
-
+        public DelegateCommand AddUICommand { get; set; }
 
 
         public EditInfoViewModel() {
 
             LoadExpressType();
+            this.AddUICommand = new DelegateCommand(new Action(AddUI));
 
         }
 
@@ -53,6 +56,20 @@ namespace auexpress.ViewModel
 
             }
 
+        }
+
+        public void TriggerAddUI() {
+
+            if (AddUIEvent != null) { 
+             
+                AddUIEvent();
+            }
+
+        }
+
+        private void AddUI() {
+
+            TriggerAddUI();
         }
    
     }
