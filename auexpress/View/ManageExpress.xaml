@@ -1,0 +1,57 @@
+﻿<Page x:Class="auexpress.View.ManageExpress"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+	Title="ManageExpress">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Command="{Binding AddCommand}" Width="70" Height="30" HorizontalAlignment="Left">添加批次</Button>
+        <DataGrid Grid.Row="1" x:Name="exlist"  ItemsSource="{Binding ManageExpressMenu}"  IsReadOnly="True" HorizontalAlignment="Center"  AutoGenerateColumns="False" GridLinesVisibility="All" CanUserDeleteRows="False" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="批次号" Binding="{Binding SmsBatch.batchNumber}" Width="30*"></DataGridTextColumn>
+                <DataGridTextColumn Header="录入日期" Binding="{Binding SmsBatch.createDate,StringFormat='yyyy-MM-dd'}" Width="100"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="操作" SortMemberPath="" Width="160">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/> 
+                                </Grid.ColumnDefinitions> 
+                                <Button Grid.Column="0" x:Name="print" HorizontalAlignment="Center" Width="100">录入运单</Button>
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DockPanel Grid.Row="2">
+            <Label  HorizontalAlignment="Left" VerticalAlignment="Center">【共</Label>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Text="{Binding PageCount}"/>
+            <Label  HorizontalAlignment="Left" VerticalAlignment="Center">页】</Label>
+            <Label  HorizontalAlignment="Left" VerticalAlignment="Center">【第</Label>
+            <TextBlock Foreground="Red" HorizontalAlignment="Left" VerticalAlignment="Center" Text="{Binding PageSize}"/>
+            <Label HorizontalAlignment="Left" VerticalAlignment="Center">页】</Label>
+            <Label HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Button Command="{Binding HomeCommand}">首页</Button>
+            </Label>
+            <Label  HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Button Command="{Binding PreviousCommand}">上一页</Button>
+            </Label>
+            <Label  HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Button Command="{Binding NextCommand}">下一页</Button>
+            </Label>
+            <Label  HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Button Command="{Binding LastCommand}">末页</Button>
+            </Label>
+        </DockPanel>
+    </Grid>
+</Page>

@@ -9,8 +9,9 @@
             <RowDefinition  MaxHeight="60"/>
             <RowDefinition   MinHeight="200"/>
         </Grid.RowDefinitions>
-        <DockPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left"  Margin="15,5,0,5"> 
-            <Button Width="60" Command="{Binding WaybillProcessingCommand}" Height="50" VerticalContentAlignment="Center" Background="{x:Null}" Margin="10,0,0,0">运单管理</Button>
+        <DockPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left"  Margin="15,5,0,5">
+            <Button Width="60" Command="{Binding WaybillProcessingCommand}" Height="50" VerticalContentAlignment="Center" Background="{x:Null}" Margin="10,0,0,0">未处理运单</Button>
+            <Button Width="60" Command="{Binding ManageExpressCommand}" Height="50" VerticalContentAlignment="Center" Background="{x:Null}" Margin="10,0,0,0">运单管理</Button>
         </DockPanel>
         <Frame x:Name="mainCount"  NavigationUIVisibility="Hidden" Grid.Row="1"  Margin="15,15,15,15" Content="{Binding MainCount}">
             

@@ -30,13 +30,20 @@ namespace auexpress.View
             this.DataContext = mainViewModel;
              
             mainViewModel.ShowSend += new MainViewModel.ShowWindowsDelegate(showInformationImport);
+            mainViewModel.ManageExpressSend += new MainViewModel.ManageExpressDelegate(showManageExpress);
             this.mainCount.Content = new Wecome();
         }
 
-        void showInformationImport(PapgeEnum papgeEnum)
+        void showInformationImport()
         {
             
                 this.mainCount.Content =new WaybillProcessingView();   
+        }
+
+        void showManageExpress()
+        {
+
+            this.mainCount.Content = new ManageExpress();
         }
     }
 }

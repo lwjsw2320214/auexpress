@@ -13,14 +13,17 @@ namespace auexpress.ViewModel
     public class MainViewModel : NotificationObject
     { 
 
-        //
-        public delegate void ShowWindowsDelegate(PapgeEnum papgeEnum);
+        
+        public delegate void ShowWindowsDelegate();
         public event ShowWindowsDelegate ShowSend;
+
+        public delegate void ManageExpressDelegate();
+        public event ManageExpressDelegate ManageExpressSend;
 
         /**
          * 信息录入
          */
-        public DelegateCommand InformationImportCommand { get; set; }
+        public DelegateCommand ManageExpressCommand { get; set; }
 
         /// <summary>
         /// 订单处理
@@ -28,27 +31,41 @@ namespace auexpress.ViewModel
         public DelegateCommand WaybillProcessingCommand { get; set; }
 
         /**
-         * 触发事件
+         * 触发
          */
-        public void TriggerSend(PapgeEnum papgeEnum)
+        public void TriggerWaybillProcessingSend()
         {
             if (ShowSend != null) {
-                ShowSend(papgeEnum);
+                ShowSend();
+            }
+        }
+
+        /**
+ * 触发
+ */
+        public void TriggerManageExpressSend()
+        {
+            if (ManageExpressSend != null)
+            {
+                ManageExpressSend();
             }
         }
 
 
-        public void InformationImportShow() {
-            TriggerSend(PapgeEnum.InformationImport);
+
+        public void ManageExpressShow()
+        {
+            TriggerManageExpressSend();
         }
 
         public void WaybillProcessingShow(){
-            TriggerSend(PapgeEnum.WaybillProcessing);
+            TriggerWaybillProcessingSend();
         }
 
         public MainViewModel() {
  
             this.WaybillProcessingCommand = new DelegateCommand(new Action(WaybillProcessingShow));
+            this.ManageExpressCommand = new DelegateCommand(new Action(ManageExpressShow));
         }
 
 

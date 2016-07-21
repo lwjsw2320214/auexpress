@@ -110,8 +110,7 @@ namespace auexpress.ViewModel
         private void HomePage()
         { 
             this.PageSize = 1;
-
-            ContentNetWork network = new ContentNetWork();
+             
             Dictionary<string, object> dc = new Dictionary<string, object>();
             dc.Add("icid", 10);
             dc.Add("irid", 0);
@@ -254,7 +253,9 @@ namespace auexpress.ViewModel
             }  
         }
 
-
+        /// <summary>
+        /// 开始添加运单
+        /// </summary>
         private void Edit() {
 
             TriggerEditShow();
