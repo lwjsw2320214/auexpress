@@ -112,6 +112,7 @@
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ManageExpressMenuItemViewModel.cs" />
     <Compile Include="ViewModel\ManageExpressViewModel.cs" />
+    <Compile Include="ViewModel\WaybillArchiveViewModel.cs" />
     <Compile Include="ViewModel\WaybillProcessingViewModel.cs" />
     <Compile Include="View\AddSmsBatch.xaml.cs">
       <DependentUpon>AddSmsBatch.xaml</DependentUpon>
@@ -130,6 +131,9 @@
     </Compile>
     <Compile Include="View\ManageExpress.xaml.cs">
       <DependentUpon>ManageExpress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WaybillArchive.xaml.cs">
+      <DependentUpon>WaybillArchive.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\WaybillProcessingView.xaml.cs">
       <DependentUpon>WaybillProcessingView.xaml</DependentUpon>
@@ -197,6 +201,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ManageExpress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WaybillArchive.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

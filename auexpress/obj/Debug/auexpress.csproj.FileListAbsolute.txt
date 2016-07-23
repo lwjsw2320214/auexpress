@@ -1,1 +1,1 @@
-G:\auexpress\auexpress\auexpress\bin\Debug\auexpress.exe
+G:\auexpress\auexpress\auexpress\obj\Debug\auexpress.exe

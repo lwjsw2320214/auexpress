@@ -1,6 +1,8 @@
-﻿using auexpress.ViewModel;
+﻿using auexpress.model;
+using auexpress.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -39,6 +41,15 @@ namespace auexpress.View
         private void loadView() {
 
             manageExpressViewModel.RefreshView();
+        }
+
+        private void print_Click(object sender, RoutedEventArgs e)
+        {
+            var mySelectedElement = exlist.SelectedItem as ManageExpressMenuItemViewModel;
+            Int64 result = mySelectedElement.SmsBatch.id;
+            AppGlobal.SmsBatchId = result;
+            WaybillArchive waybillArchive = new WaybillArchive(); 
+            waybillArchive.ShowDialog(); 
         }
     }
 }

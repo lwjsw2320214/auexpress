@@ -149,8 +149,7 @@ namespace auexpress.ViewModel
 
                 this.PageSize--;
             }
-
-            ContentNetWork network = new ContentNetWork();
+             
             Dictionary<string, object> dc = new Dictionary<string, object>();
             dc.Add("icid", 10);
             dc.Add("irid", 0);
@@ -187,8 +186,7 @@ namespace auexpress.ViewModel
 
                 this.PageSize++;
             }
-            
-            ContentNetWork network = new ContentNetWork();
+             
             Dictionary<string, object> dc = new Dictionary<string, object>();
             dc.Add("icid", 10);
             dc.Add("irid", 0);
@@ -217,9 +215,7 @@ namespace auexpress.ViewModel
          /// </summary>
         private void LastPage() {
 
-            this.PageSize = this.PageCount;
-
-            ContentNetWork network = new ContentNetWork();
+            this.PageSize = this.PageCount;  
             Dictionary<string, object> dc = new Dictionary<string, object>();
             dc.Add("icid", 10);
             dc.Add("irid", 0);

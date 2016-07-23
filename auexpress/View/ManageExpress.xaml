@@ -25,11 +25,10 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition/> 
                                 </Grid.ColumnDefinitions> 
-                                <Button Grid.Column="0" x:Name="print" HorizontalAlignment="Center" Width="100">录入运单</Button>
+                                <Button Grid.Column="0" x:Name="print" HorizontalAlignment="Center" Width="100" Click="print_Click">录入运单</Button>
                             </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
-
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>

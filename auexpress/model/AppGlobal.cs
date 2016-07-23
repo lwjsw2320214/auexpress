@@ -10,5 +10,7 @@ namespace auexpress.model
 
         public static User user;
 
+        public static Int64 SmsBatchId; 
+
     }
 }
