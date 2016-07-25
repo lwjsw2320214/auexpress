@@ -27,8 +27,19 @@ namespace auexpress.View
         public WaybillArchive()
         {
             InitializeComponent();
-            this.DataContext = waybillArchiveViewModel;  
+            this.DataContext = waybillArchiveViewModel;
+            this.waybillArchiveViewModel.printEvent += new WaybillArchiveViewModel.printDelegate(showPrint);
         }
-         
+
+        /// <summary>
+        /// 开始
+        /// </summary>
+        /// <param name="serch"></param>
+        private void showPrint(string serch) {
+
+            AppGlobal.serch = serch;
+            Print print = new Print();
+            print.ShowDialog(); 
+        }
     }
 }

@@ -76,6 +76,12 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="zxing">
+      <HintPath>..\packages\ZXing.Net.0.14.0.1\lib\net40\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation">
+      <HintPath>..\packages\ZXing.Net.0.14.0.1\lib\net40\zxing.presentation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -92,12 +98,14 @@
     <Compile Include="Model\AppGlobal.cs" />
     <Compile Include="Model\Express.cs" />
     <Compile Include="Model\ExpressType.cs" />
+    <Compile Include="Model\RecPreInputInfo.cs" />
     <Compile Include="Model\RecPreInputPage.cs" />
     <Compile Include="Model\SmsBatch.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\LoginPage.cs" />
     <Compile Include="Service\BaseService.cs" />
     <Compile Include="Service\ExpressService.cs" />
+    <Compile Include="Service\RecPreInputService.cs" />
     <Compile Include="Service\SmsBatchService.cs" />
     <Compile Include="Service\WaybillProcessingService.cs" />
     <Compile Include="Utils\ContentNetWork.cs" />
@@ -112,6 +120,8 @@
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ManageExpressMenuItemViewModel.cs" />
     <Compile Include="ViewModel\ManageExpressViewModel.cs" />
+    <Compile Include="ViewModel\PrintMenuItemViewModel.cs" />
+    <Compile Include="ViewModel\PrintViewModel.cs" />
     <Compile Include="ViewModel\WaybillArchiveViewModel.cs" />
     <Compile Include="ViewModel\WaybillProcessingViewModel.cs" />
     <Compile Include="View\AddSmsBatch.xaml.cs">
@@ -131,6 +141,9 @@
     </Compile>
     <Compile Include="View\ManageExpress.xaml.cs">
       <DependentUpon>ManageExpress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Print.xaml.cs">
+      <DependentUpon>Print.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\WaybillArchive.xaml.cs">
       <DependentUpon>WaybillArchive.xaml</DependentUpon>
@@ -204,6 +217,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Print.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\WaybillArchive.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -247,7 +264,11 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\AU.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

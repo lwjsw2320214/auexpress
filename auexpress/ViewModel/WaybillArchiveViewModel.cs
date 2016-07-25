@@ -14,7 +14,12 @@ namespace auexpress.ViewModel
     {
 
        private WaybillProcessingService waybillProcessingService = new WaybillProcessingService();
- 
+
+
+       public delegate void printDelegate(string serch);
+
+       public event printDelegate printEvent;
+
         private List<ExpressMenuItemViewModel> expressMenu;
         
         public List<ExpressMenuItemViewModel> ExpressMenu
@@ -215,9 +220,21 @@ namespace auexpress.ViewModel
         }
         #endregion
 
+        /// <summary>
+        /// 搜索并打印
+        /// </summary>
+        /// <param name="serch"></param>
         private void SerchShow(string serch) {
 
-            MessageBox.Show(serch);
+            TriggerPrint(serch);
+        }
+
+        public void TriggerPrint(string serch) {
+            if (printEvent != null)
+            {
+
+                printEvent(serch);
+            }
 
         }
 

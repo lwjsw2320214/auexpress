@@ -27,6 +27,11 @@ namespace auexpress.model
         /// 录入日期
         /// </summary>
         public string ddate { get; set; }
+
+        /// <summary>
+        /// 快递日期
+        /// </summary>
+        public string dsysdate { get; set; }
           
         /// <summary>
         /// 快递类别
@@ -37,6 +42,11 @@ namespace auexpress.model
         /// 运单号
         /// </summary>
         public string cnum { get; set; }
+
+        /// <summary>
+        /// 数量
+        /// </summary>
+        public int iitem { get; set; }
 
         /// <summary>
         /// 目的地
