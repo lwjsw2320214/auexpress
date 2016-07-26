@@ -25,18 +25,21 @@ namespace auexpress.View
     /// Print.xaml 的交互逻辑
     /// </summary>
     public partial class Print : MetroWindow
-    {
+    { 
+
         private PrintViewModel printViewModel = new PrintViewModel();
         public Print()
         {
             InitializeComponent();
             this.DataContext = printViewModel;
-            if (!String.IsNullOrEmpty(printViewModel.PrintMenu.Express.cnum)) {
+            if (null!=printViewModel.PrintMenu.Express) {
                 printBarCode(printViewModel.PrintMenu.Express.cnum);
             }
            // this.printViewModel.barCodeEvent += new PrintViewModel.barCodeDelegate(printBarCode); 
             PrintDialog pd = new PrintDialog(); 
-            //pd.PrintVisual(printBox, "test");
+            pd.PrintVisual(printBox, "test"); 
+            this.Close();
+            
         }
 
         public void printBarCode(string Contents)
@@ -60,5 +63,6 @@ namespace auexpress.View
             barcode_t.Source = bc;
             barcode_t_text.Text = Contents;
         }
+         
     }
 }

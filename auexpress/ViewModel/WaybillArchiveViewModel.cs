@@ -13,85 +13,91 @@ namespace auexpress.ViewModel
     public class WaybillArchiveViewModel : NotificationObject
     {
 
-       private WaybillProcessingService waybillProcessingService = new WaybillProcessingService();
+        private WaybillProcessingService waybillProcessingService = new WaybillProcessingService();
 
 
-       public delegate void printDelegate(string serch);
+        public delegate void printDelegate(string serch);
 
-       public event printDelegate printEvent;
+        public event printDelegate printEvent;
 
         private List<ExpressMenuItemViewModel> expressMenu;
-        
+
         public List<ExpressMenuItemViewModel> ExpressMenu
         {
             get { return expressMenu; }
-            set { 
+            set
+            {
                 expressMenu = value;
 
                 this.RaisePropertyChanged("ExpressMenu");
             }
         }
 
-        private int pageCount; 
+        private int pageCount;
 
         public int PageCount
         {
             get { return pageCount; }
-            set {
+            set
+            {
                 pageCount = value;
                 this.RaisePropertyChanged("PageCount");
             }
         }
-         
-        private int pageSize; 
+
+        private int pageSize;
 
         public int PageSize
         {
             get { return pageSize; }
-            set { 
+            set
+            {
                 pageSize = value;
                 this.RaisePropertyChanged("PageSize");
             }
         }
-          
-          
+
+
         public DelegateCommand WaybillProcessingCommand { get; set; }
 
         public DelegateCommand HomeCommand { get; set; }
 
         public DelegateCommand PreviousCommand { get; set; }
 
-         public DelegateCommand NextCommand { get; set; }
+        public DelegateCommand NextCommand { get; set; }
 
-         public DelegateCommand LastCommand { get; set; }
+        public DelegateCommand LastCommand { get; set; }
 
-         public DelegateCommand<string> SerchCommand { get; set; }
-         
+        public DelegateCommand<string> SerchCommand { get; set; }
 
-         public WaybillArchiveViewModel()
-         { 
-             HomePage();
+
+        public WaybillArchiveViewModel()
+        {
+            HomePage();
             this.HomeCommand = new DelegateCommand(new Action(HomePage));
             this.PreviousCommand = new DelegateCommand(new Action(PreviousPage));
             this.NextCommand = new DelegateCommand(new Action(NextPage));
             this.LastCommand = new DelegateCommand(new Action(LastPage));
             this.SerchCommand = new DelegateCommand<string>(SerchShow);
-              
+
         }
 
-         #region 分页
-         /// <summary>
+        #region 分页
+        /// <summary>
         /// 首页
         /// </summary>
         private void HomePage()
-        { 
+        {
+            try{
             this.PageSize = 1;
-             
+
             Dictionary<string, object> dc = new Dictionary<string, object>();
-            dc.Add("icid", 10);
+            dc.Add("icid", AppGlobal.user.icid);
             dc.Add("irid", 0);
             dc.Add("page", this.PageSize);
             dc.Add("batchId", AppGlobal.SmsBatchId);
+            dc.Add("username", AppGlobal.user.mcaccount);
+            dc.Add("token", AppGlobal.user.token);
             var Count = waybillProcessingService.GetPage(dc);
             this.ExpressMenu = new List<ExpressMenuItemViewModel>();
             if (Count.result)
@@ -105,10 +111,16 @@ namespace auexpress.ViewModel
 
                     this.ExpressMenu.Add(mv);
                 }
+                this.PageSize = Count.page;
+                this.PageCount = Count.pageCount;
             }
+            }
+            catch
+            {
 
-            this.PageCount = Count.pageCount;
-
+                MessageBox.Show("网络错误。请退出软件重新连接");
+                return;
+            }
         }
 
         /// <summary>
@@ -117,6 +129,7 @@ namespace auexpress.ViewModel
         private void PreviousPage()
         {
 
+            try{
             if (1 >= this.PageSize)
             {
                 this.PageSize = 1;
@@ -126,12 +139,14 @@ namespace auexpress.ViewModel
 
                 this.PageSize--;
             }
-             
+
             Dictionary<string, object> dc = new Dictionary<string, object>();
-            dc.Add("icid", 10);
+            dc.Add("icid", AppGlobal.user.icid);
             dc.Add("irid", 0);
             dc.Add("page", this.PageSize);
             dc.Add("batchId", AppGlobal.SmsBatchId);
+            dc.Add("username", AppGlobal.user.mcaccount);
+            dc.Add("token", AppGlobal.user.token);
             var Count = waybillProcessingService.GetPage(dc);
             this.ExpressMenu = new List<ExpressMenuItemViewModel>();
             if (Count.result)
@@ -145,31 +160,42 @@ namespace auexpress.ViewModel
 
                     this.ExpressMenu.Add(mv);
                 }
+                this.PageSize = Count.page;
+                this.PageCount = Count.pageCount;
             }
+            }
+            catch
+            {
 
-            this.PageCount = Count.pageCount;
+                MessageBox.Show("网络错误。请退出软件重新连接");
+                return;
+            }
 
         }
 
         /// <summary>
         /// 下一页
         /// </summary>
-        private void NextPage() {
-
+        private void NextPage()
+        {
+            try{
             if (this.PageCount <= this.PageSize)
             {
                 this.PageSize = this.PageCount;
             }
-            else if(this.PageCount>this.PageSize) {
+            else if (this.PageCount > this.PageSize)
+            {
 
                 this.PageSize++;
             }
-             
+
             Dictionary<string, object> dc = new Dictionary<string, object>();
-            dc.Add("icid", 10);
+            dc.Add("icid", AppGlobal.user.icid);
             dc.Add("irid", 0);
             dc.Add("page", this.PageSize);
             dc.Add("batchId", AppGlobal.SmsBatchId);
+            dc.Add("username", AppGlobal.user.mcaccount);
+            dc.Add("token", AppGlobal.user.token);
             var Count = waybillProcessingService.GetPage(dc);
             this.ExpressMenu = new List<ExpressMenuItemViewModel>();
             if (Count.result)
@@ -183,24 +209,34 @@ namespace auexpress.ViewModel
 
                     this.ExpressMenu.Add(mv);
                 }
+                this.PageSize = Count.page;
+                this.PageCount = Count.pageCount;
+            }
+            }
+            catch
+            {
+
+                MessageBox.Show("网络错误。请退出软件重新连接");
+                return;
             }
 
-            this.PageCount = Count.pageCount;
-              
         }
 
-         /// <summary>
-         /// 末页
-         /// </summary>
-        private void LastPage() {
-
+        /// <summary>
+        /// 末页
+        /// </summary>
+        private void LastPage()
+        {
+            try { 
             this.PageSize = this.PageCount;
 
             Dictionary<string, object> dc = new Dictionary<string, object>();
-            dc.Add("icid", 10);
+            dc.Add("icid", AppGlobal.user.icid);
             dc.Add("irid", 0);
             dc.Add("page", this.PageSize);
             dc.Add("batchId", AppGlobal.SmsBatchId);
+            dc.Add("username", AppGlobal.user.mcaccount);
+            dc.Add("token", AppGlobal.user.token);
             var Count = waybillProcessingService.GetPage(dc);
             this.ExpressMenu = new List<ExpressMenuItemViewModel>();
             if (Count.result)
@@ -214,26 +250,74 @@ namespace auexpress.ViewModel
 
                     this.ExpressMenu.Add(mv);
                 }
+                this.PageSize = Count.page;
+                this.PageCount = Count.pageCount;
             }
 
-            this.PageCount = Count.pageCount;
+            }
+            catch
+            {
+
+                MessageBox.Show("网络错误。请退出软件重新连接");
+                return;
+            }
         }
         #endregion
 
+        #region 搜索
         /// <summary>
         /// 搜索并打印
         /// </summary>
         /// <param name="serch"></param>
-        private void SerchShow(string serch) {
+        private void SerchShow(string serch)
+        {
 
             TriggerPrint(serch);
         }
 
-        public void TriggerPrint(string serch) {
+        public void TriggerPrint(string serch)
+        {
             if (printEvent != null)
             {
 
                 printEvent(serch);
+            }
+
+        }
+        #endregion
+
+        public void refresh()
+        {
+            try { 
+            Dictionary<string, object> dc = new Dictionary<string, object>();
+            dc.Add("icid", AppGlobal.user.icid);
+            dc.Add("irid", 0);
+            dc.Add("page", this.PageSize);
+            dc.Add("batchId", AppGlobal.SmsBatchId);
+            dc.Add("username", AppGlobal.user.mcaccount);
+            dc.Add("token", AppGlobal.user.token);
+            var Count = waybillProcessingService.GetPage(dc);
+            this.ExpressMenu = new List<ExpressMenuItemViewModel>();
+            if (Count.result)
+            {
+                foreach (var item in Count.obj)
+                {
+
+                    ExpressMenuItemViewModel mv = new ExpressMenuItemViewModel();
+
+                    mv.Express = item;
+
+                    this.ExpressMenu.Add(mv);
+                }
+                this.PageSize = Count.page;
+                this.PageCount = Count.pageCount;
+            }
+            }
+            catch
+            {
+
+                MessageBox.Show("网络错误。请退出软件重新连接");
+                return;
             }
 
         }

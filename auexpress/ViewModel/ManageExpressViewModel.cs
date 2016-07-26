@@ -1,4 +1,5 @@
-﻿using auexpress.Model;
+﻿using auexpress.model;
+using auexpress.Model;
 using auexpress.Service;
 using Microsoft.Practices.Prism.Commands;
 using Microsoft.Practices.Prism.ViewModel;
@@ -6,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace auexpress.ViewModel
 {
@@ -23,7 +25,8 @@ namespace auexpress.ViewModel
         public List<ManageExpressMenuItemViewModel> ManageExpressMenu
         {
             get { return manageExpressMenu; }
-            set { 
+            set
+            {
                 manageExpressMenu = value;
                 this.RaisePropertyChanged("ManageExpressMenu");
             }
@@ -45,11 +48,14 @@ namespace auexpress.ViewModel
 
         public int PageSize
         {
-            get {
-                if (this.pageSize == 0) { 
-                return 1;
+            get
+            {
+                if (this.pageSize == 0)
+                {
+                    return 1;
                 }
-                return pageSize; }
+                return pageSize;
+            }
             set
             {
                 pageSize = value;
@@ -66,8 +72,9 @@ namespace auexpress.ViewModel
 
         public DelegateCommand LastCommand { get; set; }
         public DelegateCommand AddCommand { get; set; }
- 
-        public ManageExpressViewModel() {
+
+        public ManageExpressViewModel()
+        {
 
             HomePage();
             this.HomeCommand = new DelegateCommand(new Action(HomePage));
@@ -84,143 +91,15 @@ namespace auexpress.ViewModel
         /// </summary>
         private void HomePage()
         {
-            this.PageSize = 1;
-
-            Dictionary<string, object> dc = new Dictionary<string, object>();
-            dc.Add("icid", 10); 
-            dc.Add("page", this.PageSize);
-            var count = smsBatchService.getList(dc);
-            this.ManageExpressMenu = new List<ManageExpressMenuItemViewModel>();
-            if (count.result) {
-                foreach (var item in count.obj) {
-                    ManageExpressMenuItemViewModel mem = new ManageExpressMenuItemViewModel();
-                    mem.SmsBatch = item;
-                    this.ManageExpressMenu.Add(mem);
-                }
-                this.PageCount = count.pageCount;
-                this.pageSize = count.page;
-            }
-
-        }
-
-        /// <summary>
-        /// 上一页
-        /// </summary>
-        private void PreviousPage()
-        {
-
-            if (1 >= this.PageSize)
+            try
             {
                 this.PageSize = 1;
-            }
-            else if (this.PageSize > 1)
-            {
 
-                this.PageSize--;
-            }
-
-            Dictionary<string, object> dc = new Dictionary<string, object>();
-            dc.Add("icid", 10);
-            dc.Add("page", this.PageSize);
-            var count = smsBatchService.getList(dc);
-            this.ManageExpressMenu = new List<ManageExpressMenuItemViewModel>();
-            if (count.result)
-            {
-                foreach (var item in count.obj)
-                {
-                    ManageExpressMenuItemViewModel mem = new ManageExpressMenuItemViewModel();
-                    mem.SmsBatch = item;
-                    this.ManageExpressMenu.Add(mem);
-                }
-                this.PageCount = count.pageCount;
-                this.pageSize = count.page;
-            }
-             
-        }
-
-        /// <summary>
-        /// 下一页
-        /// </summary>
-        private void NextPage()
-        {
-
-            if (this.PageCount <= this.PageSize)
-            {
-                this.PageSize = this.PageCount;
-            }
-            else if (this.PageCount > this.PageSize)
-            {
-
-                this.PageSize++;
-            }
-
-            Dictionary<string, object> dc = new Dictionary<string, object>();
-            dc.Add("icid", 10);
-            dc.Add("page", this.PageSize);
-            var count = smsBatchService.getList(dc);
-            this.ManageExpressMenu = new List<ManageExpressMenuItemViewModel>();
-            if (count.result)
-            {
-                foreach (var item in count.obj)
-                {
-                    ManageExpressMenuItemViewModel mem = new ManageExpressMenuItemViewModel();
-                    mem.SmsBatch = item;
-                    this.ManageExpressMenu.Add(mem);
-                }
-                this.PageCount = count.pageCount;
-                this.pageSize = count.page;
-            }
-
-        }
-
-        /// <summary>
-        /// 末页
-        /// </summary>
-        private void LastPage()
-        {
-
-            this.PageSize = this.PageCount;
-
-            Dictionary<string, object> dc = new Dictionary<string, object>();
-            dc.Add("icid", 10);
-            dc.Add("page", this.PageSize);
-            var count = smsBatchService.getList(dc);
-            this.ManageExpressMenu = new List<ManageExpressMenuItemViewModel>();
-            if (count.result)
-            {
-                foreach (var item in count.obj)
-                {
-                    ManageExpressMenuItemViewModel mem = new ManageExpressMenuItemViewModel();
-                    mem.SmsBatch = item;
-                    this.ManageExpressMenu.Add(mem);
-                }
-                this.PageCount = count.pageCount;
-                this.pageSize = count.page;
-            }
-
-        }
-
-        #endregion
-
-
-        public void TriggerAddSmsBatch() {
-
-            if (ShowAddSmsBatchEvent != null) {
-
-                ShowAddSmsBatchEvent();
-            }
-        }
-
-        private void AddSmsBatch() {
-
-            TriggerAddSmsBatch();
-        }
-
-        public void RefreshView()
-        {
                 Dictionary<string, object> dc = new Dictionary<string, object>();
-                dc.Add("icid", 10);
+                dc.Add("icid", AppGlobal.user.icid);
                 dc.Add("page", this.PageSize);
+                dc.Add("username", AppGlobal.user.mcaccount);
+                dc.Add("token", AppGlobal.user.token);
                 var count = smsBatchService.getList(dc);
                 this.ManageExpressMenu = new List<ManageExpressMenuItemViewModel>();
                 if (count.result)
@@ -234,6 +113,190 @@ namespace auexpress.ViewModel
                     this.PageCount = count.pageCount;
                     this.pageSize = count.page;
                 }
+            }
+            catch
+            {
+
+                MessageBox.Show("网络错误。请退出软件重新连接");
+                return;
+            }
+
+        }
+
+        /// <summary>
+        /// 上一页
+        /// </summary>
+        private void PreviousPage()
+        {
+            try
+            {
+
+                if (1 >= this.PageSize)
+                {
+                    this.PageSize = 1;
+                }
+                else if (this.PageSize > 1)
+                {
+
+                    this.PageSize--;
+                }
+
+                Dictionary<string, object> dc = new Dictionary<string, object>();
+                dc.Add("icid", AppGlobal.user.icid);
+                dc.Add("page", this.PageSize);
+                dc.Add("username", AppGlobal.user.mcaccount);
+                dc.Add("token", AppGlobal.user.token);
+                var count = smsBatchService.getList(dc);
+                this.ManageExpressMenu = new List<ManageExpressMenuItemViewModel>();
+                if (count.result)
+                {
+                    foreach (var item in count.obj)
+                    {
+                        ManageExpressMenuItemViewModel mem = new ManageExpressMenuItemViewModel();
+                        mem.SmsBatch = item;
+                        this.ManageExpressMenu.Add(mem);
+                    }
+                    this.PageCount = count.pageCount;
+                    this.pageSize = count.page;
+                }
+            }
+            catch
+            {
+
+                MessageBox.Show("网络错误。请退出软件重新连接");
+                return;
+            }
+
+        }
+
+        /// <summary>
+        /// 下一页
+        /// </summary>
+        private void NextPage()
+        {
+            try
+            {
+                if (this.PageCount <= this.PageSize)
+                {
+                    this.PageSize = this.PageCount;
+                }
+                else if (this.PageCount > this.PageSize)
+                {
+
+                    this.PageSize++;
+                }
+
+                Dictionary<string, object> dc = new Dictionary<string, object>();
+                dc.Add("icid", AppGlobal.user.icid);
+                dc.Add("page", this.PageSize);
+                dc.Add("username", AppGlobal.user.mcaccount);
+                dc.Add("token", AppGlobal.user.token);
+                var count = smsBatchService.getList(dc);
+                this.ManageExpressMenu = new List<ManageExpressMenuItemViewModel>();
+                if (count.result)
+                {
+                    foreach (var item in count.obj)
+                    {
+                        ManageExpressMenuItemViewModel mem = new ManageExpressMenuItemViewModel();
+                        mem.SmsBatch = item;
+                        this.ManageExpressMenu.Add(mem);
+                    }
+                    this.PageCount = count.pageCount;
+                    this.pageSize = count.page;
+                }
+            }
+            catch
+            {
+
+                MessageBox.Show("网络错误。请退出软件重新连接");
+                return;
+            }
+        }
+
+        /// <summary>
+        /// 末页
+        /// </summary>
+        private void LastPage()
+        {
+            try
+            {
+                this.PageSize = this.PageCount;
+
+                Dictionary<string, object> dc = new Dictionary<string, object>();
+                dc.Add("icid", AppGlobal.user.icid);
+                dc.Add("page", this.PageSize);
+                dc.Add("username", AppGlobal.user.mcaccount);
+                dc.Add("token", AppGlobal.user.token);
+                var count = smsBatchService.getList(dc);
+                this.ManageExpressMenu = new List<ManageExpressMenuItemViewModel>();
+                if (count.result)
+                {
+                    foreach (var item in count.obj)
+                    {
+                        ManageExpressMenuItemViewModel mem = new ManageExpressMenuItemViewModel();
+                        mem.SmsBatch = item;
+                        this.ManageExpressMenu.Add(mem);
+                    }
+                    this.PageCount = count.pageCount;
+                    this.pageSize = count.page;
+                }
+            }
+            catch
+            {
+
+                MessageBox.Show("网络错误。请退出软件重新连接");
+                return;
+            }
+        }
+
+        #endregion
+
+
+        public void TriggerAddSmsBatch()
+        {
+
+            if (ShowAddSmsBatchEvent != null)
+            {
+
+                ShowAddSmsBatchEvent();
+            }
+        }
+
+        private void AddSmsBatch()
+        {
+
+            TriggerAddSmsBatch();
+        }
+
+        public void RefreshView()
+        {
+            try
+            {
+                Dictionary<string, object> dc = new Dictionary<string, object>();
+                dc.Add("icid", AppGlobal.user.icid);
+                dc.Add("page", this.PageSize);
+                dc.Add("username", AppGlobal.user.mcaccount);
+                dc.Add("token", AppGlobal.user.token);
+                var count = smsBatchService.getList(dc);
+                this.ManageExpressMenu = new List<ManageExpressMenuItemViewModel>();
+                if (count.result)
+                {
+                    foreach (var item in count.obj)
+                    {
+                        ManageExpressMenuItemViewModel mem = new ManageExpressMenuItemViewModel();
+                        mem.SmsBatch = item;
+                        this.ManageExpressMenu.Add(mem);
+                    }
+                    this.PageCount = count.pageCount;
+                    this.pageSize = count.page;
+                }
+            }
+            catch
+            {
+
+                MessageBox.Show("网络错误。请退出软件重新连接");
+                return;
+            }
 
         }
     }

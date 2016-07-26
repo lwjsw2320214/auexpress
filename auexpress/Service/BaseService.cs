@@ -11,7 +11,7 @@ namespace auexpress.Service
 
         public ContentNetWork network = new ContentNetWork();
 
-        public string url = "http://127.0.0.1:8080/";
+        public string url = "http://api.au-express.com:8080/auexpress-api/";
 
     }
 }

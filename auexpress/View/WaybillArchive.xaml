@@ -36,8 +36,8 @@
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition/> 
-                                </Grid.ColumnDefinitions> 
-                                <Button Grid.Column="1" x:Name="print">打印</Button>
+                                </Grid.ColumnDefinitions>
+                                <Button Grid.Column="1" Click="print_Click" x:Name="print">打印</Button>
                             </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

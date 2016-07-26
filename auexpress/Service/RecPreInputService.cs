@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using auexpress.Utils;
+using auexpress.model;
 
 namespace auexpress.Service
 {
@@ -16,6 +17,9 @@ namespace auexpress.Service
             dc.Add("iid", iid);
             dc.Add("icid", icid);
             dc.Add("waybillId", waybillId);
+            dc.Add("username", AppGlobal.user.mcaccount);
+            dc.Add("token", AppGlobal.user.token);
+            dc.Add("batchId", AppGlobal.SmsBatchId);
             var pageCount = network.getApi(url + "recPreInput/getRecPreInput", dc);
             var count = pageCount.JsonToObject<RecPreInputInfo>();
             return count;

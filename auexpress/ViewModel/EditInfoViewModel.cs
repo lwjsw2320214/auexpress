@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows;
 
 namespace auexpress.ViewModel
 {
@@ -39,6 +40,7 @@ namespace auexpress.ViewModel
 
         private void LoadExpressType() {
 
+            try{
             var count = expressService.getExpressTypeList();
 
             this.EditInfoMenu = new List<EditMenuItemViewModel>();
@@ -54,6 +56,13 @@ namespace auexpress.ViewModel
                     this.editInfoMenu.Add(editItem); 
                 }
 
+            }
+            }
+            catch
+            {
+
+                MessageBox.Show("网络错误。请退出软件重新连接");
+                return;
             }
 
         }

@@ -12,7 +12,7 @@ namespace auexpress.Model
         public Boolean result { get; set; }
 
         //结果集
-        public int obj { get; set; }
+        public int? obj { get; set; }
 
         public int pageCount { get; set; }
 

@@ -39,17 +39,17 @@
             <TextBlock x:Name="barcode_text" Grid.Column="0" Grid.Row="1"  Margin="14,47,0,5" Height="20" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16"  FontWeight="Bold"/>
             <Label Grid.Column="1" Grid.Row="1" Margin="0,23,0,3" FontSize="23" VerticalAlignment="Center" Height="35" Content="{Binding PrintMenu.Express.cdes}"></Label>
             <Label Grid.Column="0" Grid.Row="2" Margin="40,0,0,0" VerticalAlignment="Center" FontWeight="Bold" Height="25" Content="{Binding PrintMenu.Express.cnum}"></Label>
-            <TextBlock  Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Margin="30,5,0,4" FontWeight="Bold" Height="16" DataContext="{Binding PrintMenu.Express.dsysdate}"></TextBlock>
-            <TextBlock  Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Margin="45,5,8,5" TextWrapping="Wrap" FontSize="14">姓名：刘维军 15680030013 地址：江苏省苏州市吴中区长蠡路99号603室</TextBlock>
-            <TextBlock Grid.Column="0" Grid.Row="4" Width="245" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="45,5,0,5" TextWrapping="Wrap" FontSize="14">姓名：刘维军 15680030013 地址：江苏省苏州市吴中区长蠡路99号603室</TextBlock>
-            <TextBlock Grid.Column="1" Grid.Row="4" Width="35" HorizontalAlignment="Left" Margin="80,16,0,16" VerticalAlignment="Center" FontSize="18" Height="23" DataContext="{Binding PrintMenu.Express.iitem}"></TextBlock>
-            <TextBlock Grid.Column="0" Grid.Row="6" Width="130" HorizontalAlignment="Left" Margin="45,5,0,10" TextWrapping="Wrap" FontSize="14"  DataContext="{Binding PrintMenu.Express.cgoods}"></TextBlock>
-            <TextBlock Grid.Column="0" Grid.Row="6" Width="50" Height="20" HorizontalAlignment="Left" Margin="190,55,0,0"  DataContext="{Binding PrintMenu.Express.fweight}"></TextBlock>
-            <TextBlock Grid.Column="1" Grid.Row="6" Width="55" Height="20" HorizontalAlignment="Left" TextAlignment="Center" Margin="60,0,0,50"  DataContext="{Binding PrintMenu.Express.total}"></TextBlock>
+            <TextBlock  Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Margin="30,5,0,4" FontWeight="Bold" Height="16" Text="{Binding PrintMenu.Express.dsysdate}"></TextBlock>
+            <TextBlock  Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Margin="45,5,8,5" TextWrapping="Wrap" FontSize="14" Text="{Binding Addressee}"></TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="4" Width="245" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="45,5,0,5" TextWrapping="Wrap" FontSize="14" Text="{Binding TheSender}"></TextBlock>
+            <TextBlock Grid.Column="1" Grid.Row="4" Width="35" HorizontalAlignment="Left" Margin="80,16,0,16" VerticalAlignment="Center" FontSize="18" Height="23" Text="{Binding PrintMenu.Express.iitem}"></TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="6" Width="130" HorizontalAlignment="Left" Margin="45,5,0,10" TextWrapping="Wrap" FontSize="14"  Text="{Binding PrintMenu.Express.cgoods}"></TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="6" Width="50" Height="20" HorizontalAlignment="Left" Margin="190,55,0,0"  Text="{Binding PrintMenu.Express.fweight}"></TextBlock>
+            <TextBlock Grid.Column="1" Grid.Row="6" Width="55" Height="20" HorizontalAlignment="Left" TextAlignment="Center" Margin="60,0,0,50"  Text="{Binding PrintMenu.Express.total}"></TextBlock>
             <Image x:Name="barcode_t" Grid.Column="0" Grid.Row="7" Margin="-4,10,0,21" Width="240" Height="40" HorizontalAlignment="Left"/>
             <TextBlock x:Name="barcode_t_text" Grid.Column="0" Grid.Row="7"  Margin="5,44,0,1" Height="20" Width="230" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16"  FontWeight="Bold" Grid.ColumnSpan="2"/>
-            <TextBlock  Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="2" Margin="39,0,22,22" TextWrapping="Wrap" FontSize="14">姓名：刘维军 15680030013 地址：江苏省苏州市吴中区长蠡路99号603室</TextBlock>
-            <TextBlock  Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="2" Margin="39,1,22,13" TextWrapping="Wrap" FontSize="14" Grid.RowSpan="2">姓名：刘维军 15680030013 地址：江苏省苏州市吴中区长蠡路99号603室</TextBlock>
+            <TextBlock  Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="2" Margin="39,0,22,22" TextWrapping="Wrap" FontSize="14"  Text="{Binding Addressee}"></TextBlock>
+            <TextBlock  Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="2" Margin="39,1,22,13" TextWrapping="Wrap" FontSize="14" Grid.RowSpan="2"  Text="{Binding TheSender}"></TextBlock>
         </Grid> 
     </Grid>
 </Controls:MetroWindow>

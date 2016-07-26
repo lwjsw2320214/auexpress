@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows;
 
 namespace auexpress.ViewModel
 {
@@ -80,12 +81,15 @@ namespace auexpress.ViewModel
         /// <summary>
         /// 初始化数据 
         /// </summary>
-        private void LoadExpressMenu() { 
+        private void LoadExpressMenu() {
 
+            try { 
             Dictionary<string, object> dc = new Dictionary<string, object>();
-            dc.Add("icid", 10);
+            dc.Add("icid", AppGlobal.user.icid);
             dc.Add("irid", 0);
-            dc.Add("page", 1);
+            dc.Add("page", 1); 
+            dc.Add("username", AppGlobal.user.mcaccount);
+            dc.Add("token", AppGlobal.user.token);
             var Count = waybillProcessingService.LoadExpressMenu(dc); 
             this.ExpressMenu = new List<ExpressMenuItemViewModel>();
             if (Count.result) {
@@ -98,23 +102,34 @@ namespace auexpress.ViewModel
 
                     this.ExpressMenu.Add(mv);
                 }
+                this.PageCount = Count.pageCount;
+                this.PageSize = Count.page;
               }
 
-            this.PageCount = Count.pageCount;
-            this.PageSize = Count.page; 
+            
+            }
+            catch
+            {
+
+                MessageBox.Show("网络错误。请退出软件重新连接");
+                return;
+            }
         }
 
         /// <summary>
         /// 首页
         /// </summary>
         private void HomePage()
-        { 
+        {
+            try { 
             this.PageSize = 1;
              
             Dictionary<string, object> dc = new Dictionary<string, object>();
-            dc.Add("icid", 10);
+            dc.Add("icid", AppGlobal.user.icid);
             dc.Add("irid", 0);
-            dc.Add("page", this.PageSize);
+            dc.Add("page", this.PageSize); 
+            dc.Add("username", AppGlobal.user.mcaccount);
+            dc.Add("token", AppGlobal.user.token);
             var Count = waybillProcessingService.GetPage(dc);
             this.ExpressMenu = new List<ExpressMenuItemViewModel>();
             if (Count.result)
@@ -128,9 +143,17 @@ namespace auexpress.ViewModel
 
                     this.ExpressMenu.Add(mv);
                 }
+                this.PageCount = Count.pageCount;
+                this.pageSize = Count.page;
             }
+                 
+            }
+            catch
+            {
 
-            this.PageCount = Count.pageCount;
+                MessageBox.Show("网络错误。请退出软件重新连接");
+                return;
+            }
 
         }
 
@@ -139,6 +162,7 @@ namespace auexpress.ViewModel
         /// </summary>
         private void PreviousPage()
         {
+            try { 
 
             if (1 >= this.PageSize)
             {
@@ -151,9 +175,11 @@ namespace auexpress.ViewModel
             }
              
             Dictionary<string, object> dc = new Dictionary<string, object>();
-            dc.Add("icid", 10);
+            dc.Add("icid", AppGlobal.user.icid);
             dc.Add("irid", 0);
-            dc.Add("page", this.PageSize); 
+            dc.Add("page", this.PageSize);
+            dc.Add("username", AppGlobal.user.mcaccount);
+            dc.Add("token", AppGlobal.user.token);
             var Count = waybillProcessingService.GetPage(dc);
             this.ExpressMenu = new List<ExpressMenuItemViewModel>();
             if (Count.result)
@@ -167,9 +193,18 @@ namespace auexpress.ViewModel
 
                     this.ExpressMenu.Add(mv);
                 }
+                this.PageCount = Count.pageCount;
+                this.pageSize = Count.page;
             }
 
-            this.PageCount = Count.pageCount;
+            
+            }
+            catch
+            {
+
+                MessageBox.Show("网络错误。请退出软件重新连接");
+                return;
+            }
 
         }
 
@@ -177,6 +212,7 @@ namespace auexpress.ViewModel
         /// 下一页
         /// </summary>
         private void NextPage() {
+            try { 
 
             if (this.PageCount <= this.PageSize)
             {
@@ -188,9 +224,11 @@ namespace auexpress.ViewModel
             }
              
             Dictionary<string, object> dc = new Dictionary<string, object>();
-            dc.Add("icid", 10);
+            dc.Add("icid", AppGlobal.user.icid);
             dc.Add("irid", 0);
             dc.Add("page", this.PageSize);
+            dc.Add("username", AppGlobal.user.mcaccount);
+            dc.Add("token", AppGlobal.user.token);
             var Count = waybillProcessingService.GetPage(dc);
             this.ExpressMenu = new List<ExpressMenuItemViewModel>();
             if (Count.result)
@@ -204,10 +242,18 @@ namespace auexpress.ViewModel
 
                     this.ExpressMenu.Add(mv);
                 }
+                this.PageCount = Count.pageCount;
+                this.pageSize = Count.page;
             }
 
-            this.PageCount = Count.pageCount;
-              
+            
+            }
+            catch
+            {
+
+                MessageBox.Show("网络错误。请退出软件重新连接");
+                return;
+            }
         }
 
          /// <summary>
@@ -215,11 +261,14 @@ namespace auexpress.ViewModel
          /// </summary>
         private void LastPage() {
 
+            try { 
             this.PageSize = this.PageCount;  
             Dictionary<string, object> dc = new Dictionary<string, object>();
-            dc.Add("icid", 10);
+            dc.Add("icid", AppGlobal.user.icid);
             dc.Add("irid", 0);
             dc.Add("page", this.PageSize);
+            dc.Add("username", AppGlobal.user.mcaccount);
+            dc.Add("token", AppGlobal.user.token);
             var Count = waybillProcessingService.GetPage(dc);
             this.ExpressMenu = new List<ExpressMenuItemViewModel>();
             if (Count.result)
@@ -233,9 +282,18 @@ namespace auexpress.ViewModel
 
                     this.ExpressMenu.Add(mv);
                 }
+                this.PageCount = Count.pageCount;
+                this.pageSize = Count.page;
             }
 
-            this.PageCount = Count.pageCount;
+            
+            }
+            catch
+            {
+
+                MessageBox.Show("网络错误。请退出软件重新连接");
+                return;
+            }
         }
 
 

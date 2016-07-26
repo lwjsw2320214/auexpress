@@ -1,4 +1,5 @@
-﻿using auexpress.Model;
+﻿using auexpress.model;
+using auexpress.Model;
 using auexpress.Service;
 using Microsoft.Practices.Prism.Commands;
 using Microsoft.Practices.Prism.ViewModel;
@@ -43,22 +44,30 @@ namespace auexpress.ViewModel
         /// <summary>
         /// 添加
         /// </summary>
-        private void AddSmsBatch() { 
-            SmsBatch smsBatch = new SmsBatch();
-            smsBatch.batchNumber = this.BatchNumber;
-            smsBatch.createDate = DateTime.Now.ToString("yyyy-MM-dd");
-            smsBatch.createUser = 10; 
-            var count= smsBatchService.add(smsBatch);
-            if (count == 0) {
-
-                TriggerMessage(false, "添加批次号失败，请联系系统管理员！");
-            }
-            else if (count == 1) {
-                TriggerMessage(true, "添加批次号成功！");
-            }
-            else if (count == 2)
+        private void AddSmsBatch() {
+            try
             {
-                TriggerMessage(false, "批次号重复，请重新填写！");
+                SmsBatch smsBatch = new SmsBatch();
+                smsBatch.batchNumber = this.BatchNumber;
+                smsBatch.createDate = DateTime.Now.ToString("yyyy-MM-dd");
+                smsBatch.createUser = AppGlobal.user.icid;
+                var count = smsBatchService.add(smsBatch);
+                if (count == 0)
+                {
+
+                    TriggerMessage(false, "添加批次号失败，请联系系统管理员！");
+                }
+                else if (count == 1)
+                {
+                    TriggerMessage(true, "添加批次号成功！");
+                }
+                else if (count == 2)
+                {
+                    TriggerMessage(false, "批次号重复，请重新填写！");
+                }
+            }
+            catch {
+                TriggerMessage(false, "网络请求错误。请退出软件重新连接");
             }
         }
 

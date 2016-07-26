@@ -28,7 +28,7 @@ namespace auexpress.View
         {
             InitializeComponent();
             this.DataContext = waybillArchiveViewModel;
-            this.waybillArchiveViewModel.printEvent += new WaybillArchiveViewModel.printDelegate(showPrint);
+            this.waybillArchiveViewModel.printEvent += new WaybillArchiveViewModel.printDelegate(showPrint); 
         }
 
         /// <summary>
@@ -38,8 +38,22 @@ namespace auexpress.View
         private void showPrint(string serch) {
 
             AppGlobal.serch = serch;
-            Print print = new Print();
-            print.ShowDialog(); 
+            Print print = new Print();  
+        }
+
+        private void print_Click(object sender, RoutedEventArgs e)
+        {
+            var mySelectedElement = exlist.SelectedItem as ExpressMenuItemViewModel;
+            Int64 result = mySelectedElement.Express.iid;
+            AppGlobal.iid = result;
+            AppGlobal.serch = null;
+            loadRefresh();
+            Print print = new Print(); 
+        }
+
+        private void loadRefresh() {
+
+            waybillArchiveViewModel.refresh();
         }
     }
 }
