@@ -2,8 +2,10 @@
 using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -21,24 +23,64 @@ using ZXing.QrCode.Internal;
 
 namespace auexpress.View
 {
+ 
     /// <summary>
     /// Print.xaml 的交互逻辑
     /// </summary>
     public partial class Print : MetroWindow
-    { 
+    {
 
-        private PrintViewModel printViewModel = new PrintViewModel();
+        //定义委托
+        public delegate void ChangeTextHandler();
+        public event ChangeTextHandler ChangeTextEvent;
+
+        private PrintViewModel printViewModel = new PrintViewModel();   
         public Print()
         {
             InitializeComponent();
+            var width = 0d;
+            double.TryParse(ConfigurationManager.AppSettings["width"], out width);
+            this.printBox.Width = width; 
+            var height = 0d;
+            double.TryParse(ConfigurationManager.AppSettings["height"], out height);
+            this.printBox.Width = height; 
+            this.printBox.Height = 0d;
+            var left = 0d;
+            double.TryParse(ConfigurationManager.AppSettings["left"],out left); 
+            var top =0d;
+            double.TryParse(ConfigurationManager.AppSettings["top"], out top);
+            var right = 0d;
+            double.TryParse(ConfigurationManager.AppSettings["right"], out right); 
+            var bottom = 0d;
+            double.TryParse(ConfigurationManager.AppSettings["bottom"], out bottom);
+            this.printBox.Margin = new Thickness(left, top, right, bottom);
             this.DataContext = printViewModel;
-            if (null!=printViewModel.PrintMenu.Express) {
-                printBarCode(printViewModel.PrintMenu.Express.cnum);
+            try
+            {
+                if (null != printViewModel.PrintMenu.Express)
+                {
+                    SoundPlayer sp = new SoundPlayer("Resources/6063.wav");
+                    sp.Play();
+                    printBarCode(printViewModel.PrintMenu.Express.cnum);
+                    ChangeText();
+                    PrintDialog pd = new PrintDialog();
+                    pd.PrintVisual(printBox, "test");
+                    this.Close();
+                }
+                else {
+                    SoundPlayer sp = new SoundPlayer("Resources/6579.wav");
+                    sp.Play();
+                    MessageBox.Show("打印错误！");
+                    this.Close();
+                }
+                // this.printViewModel.barCodeEvent += new PrintViewModel.barCodeDelegate(printBarCode); 
             }
-           // this.printViewModel.barCodeEvent += new PrintViewModel.barCodeDelegate(printBarCode); 
-            PrintDialog pd = new PrintDialog(); 
-            pd.PrintVisual(printBox, "test"); 
-            this.Close();
+            catch {
+                SoundPlayer sp = new SoundPlayer("Resources/6579.wav");
+                sp.Play();
+                MessageBox.Show("打印错误！");
+                this.Close();
+            }
             
         }
 
@@ -62,6 +104,14 @@ namespace auexpress.View
             barcode_text.Text = Contents;
             barcode_t.Source = bc;
             barcode_t_text.Text = Contents;
+        }
+
+        private void ChangeText() {
+
+            if (ChangeTextEvent != null) {
+
+                ChangeTextEvent();
+            }
         }
          
     }

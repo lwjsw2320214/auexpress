@@ -14,6 +14,7 @@
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>发布\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -57,6 +57,7 @@
       <HintPath>H:\Microsoft Prism\Bin\Desktop\Microsoft.Practices.Prism.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Caching" />
@@ -100,6 +101,7 @@
     <Compile Include="Model\ExpressType.cs" />
     <Compile Include="Model\RecPreInputInfo.cs" />
     <Compile Include="Model\RecPreInputPage.cs" />
+    <Compile Include="Model\SelectState.cs" />
     <Compile Include="Model\SmsBatch.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\LoginPage.cs" />
@@ -122,6 +124,7 @@
     <Compile Include="ViewModel\ManageExpressViewModel.cs" />
     <Compile Include="ViewModel\PrintMenuItemViewModel.cs" />
     <Compile Include="ViewModel\PrintViewModel.cs" />
+    <Compile Include="ViewModel\SelectStateMenuItemModel.cs" />
     <Compile Include="ViewModel\WaybillArchiveViewModel.cs" />
     <Compile Include="ViewModel\WaybillProcessingViewModel.cs" />
     <Compile Include="View\AddSmsBatch.xaml.cs">
@@ -268,6 +271,14 @@
     <Resource Include="Resources\AU.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\6063.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\6579.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

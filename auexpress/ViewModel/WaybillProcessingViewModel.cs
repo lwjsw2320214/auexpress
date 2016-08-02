@@ -1,4 +1,5 @@
 ﻿using auexpress.model;
+using auexpress.Model;
 using auexpress.Service;
 using auexpress.Utils;
 using Microsoft.Practices.Prism.Commands;
@@ -31,6 +32,16 @@ namespace auexpress.ViewModel
                 this.RaisePropertyChanged("ExpressMenu");
             }
         }
+        private List<SelectStateMenuItemModel> selectStateMenu;
+
+        public List<SelectStateMenuItemModel> SelectStateMenu
+        {
+            get { return selectStateMenu; }
+            set { 
+                selectStateMenu = value;
+                this.RaisePropertyChanged("SelectStateMenu");
+            }
+        }
 
         private int pageCount; 
 
@@ -53,7 +64,18 @@ namespace auexpress.ViewModel
                 this.RaisePropertyChanged("PageSize");
             }
         }
-          
+
+        private int selectItem;
+
+        public int SelectItem
+        {
+            get { return selectItem; }
+            set
+            {
+                selectItem = value;
+                this.RaisePropertyChanged("SelectItem");
+            }
+        }  
         public DelegateCommand WaybillProcessingCommand { get; set; }
 
         public DelegateCommand HomeCommand { get; set; }
@@ -65,15 +87,17 @@ namespace auexpress.ViewModel
          public DelegateCommand LastCommand { get; set; }
 
          public DelegateCommand EditCommand { get; set; }
+         
 
         public WaybillProcessingViewModel() {
 
             LoadExpressMenu();
+            LoadSelectState();
             this.HomeCommand = new DelegateCommand(new Action(HomePage));
             this.PreviousCommand = new DelegateCommand(new Action(PreviousPage));
             this.NextCommand = new DelegateCommand(new Action(NextPage));
             this.LastCommand = new DelegateCommand(new Action(LastPage));
-            this.EditCommand = new DelegateCommand(new Action(Edit));
+            this.EditCommand = new DelegateCommand(new Action(Edit)); 
 
             //this.WaybillProcessingCommand = new DelegateCommand(new Action());
         }
@@ -81,8 +105,7 @@ namespace auexpress.ViewModel
         /// <summary>
         /// 初始化数据 
         /// </summary>
-        private void LoadExpressMenu() {
-
+        private void LoadExpressMenu() { 
             try { 
             Dictionary<string, object> dc = new Dictionary<string, object>();
             dc.Add("icid", AppGlobal.user.icid);
@@ -116,6 +139,26 @@ namespace auexpress.ViewModel
             }
         }
 
+        private void LoadSelectState() {
+
+            List<string> list = new List<string>();
+
+            list.Add("全部运单");
+            list.Add("未入批次运单");
+            list.Add("已入批次运单");
+
+            this.SelectStateMenu = new List<SelectStateMenuItemModel>();
+            for (var i = 0; i < list.Count; i++) { 
+            SelectStateMenuItemModel ssm = new SelectStateMenuItemModel();
+            SelectState ss = new SelectState();
+            ss.ItemId = i;
+            ss.ItemName = list[i];
+            ssm.SelectState = ss;
+            this.SelectStateMenu.Add(ssm);
+            }
+        }
+         
+
         /// <summary>
         /// 首页
         /// </summary>
@@ -130,6 +173,7 @@ namespace auexpress.ViewModel
             dc.Add("page", this.PageSize); 
             dc.Add("username", AppGlobal.user.mcaccount);
             dc.Add("token", AppGlobal.user.token);
+            dc.Add("batchId", this.SelectItem);
             var Count = waybillProcessingService.GetPage(dc);
             this.ExpressMenu = new List<ExpressMenuItemViewModel>();
             if (Count.result)
@@ -180,6 +224,7 @@ namespace auexpress.ViewModel
             dc.Add("page", this.PageSize);
             dc.Add("username", AppGlobal.user.mcaccount);
             dc.Add("token", AppGlobal.user.token);
+            dc.Add("batchId", this.SelectItem);
             var Count = waybillProcessingService.GetPage(dc);
             this.ExpressMenu = new List<ExpressMenuItemViewModel>();
             if (Count.result)
@@ -229,6 +274,7 @@ namespace auexpress.ViewModel
             dc.Add("page", this.PageSize);
             dc.Add("username", AppGlobal.user.mcaccount);
             dc.Add("token", AppGlobal.user.token);
+            dc.Add("batchId", this.SelectItem);
             var Count = waybillProcessingService.GetPage(dc);
             this.ExpressMenu = new List<ExpressMenuItemViewModel>();
             if (Count.result)
@@ -269,6 +315,7 @@ namespace auexpress.ViewModel
             dc.Add("page", this.PageSize);
             dc.Add("username", AppGlobal.user.mcaccount);
             dc.Add("token", AppGlobal.user.token);
+            dc.Add("batchId", this.SelectItem);
             var Count = waybillProcessingService.GetPage(dc);
             this.ExpressMenu = new List<ExpressMenuItemViewModel>();
             if (Count.result)
@@ -313,7 +360,51 @@ namespace auexpress.ViewModel
         private void Edit() {
 
             TriggerEditShow();
-        } 
+        }
+
+
+        /// <summary>
+        /// 下拉
+        /// </summary>
+        public void loadSelect()
+        {
+            try
+            {
+                this.PageSize = 1;
+
+                Dictionary<string, object> dc = new Dictionary<string, object>();
+                dc.Add("icid", AppGlobal.user.icid);
+                dc.Add("irid", 0);
+                dc.Add("page", this.PageSize);
+                dc.Add("username", AppGlobal.user.mcaccount);
+                dc.Add("token", AppGlobal.user.token);
+                dc.Add("batchId",this.SelectItem);
+                var Count = waybillProcessingService.GetPage(dc);
+                this.ExpressMenu = new List<ExpressMenuItemViewModel>();
+                if (Count.result)
+                {
+                    foreach (var item in Count.obj)
+                    {
+
+                        ExpressMenuItemViewModel mv = new ExpressMenuItemViewModel();
+
+                        mv.Express = item;
+
+                        this.ExpressMenu.Add(mv);
+                    }
+                    this.PageCount = Count.pageCount;
+                    this.pageSize = Count.page;
+                }
+
+            }
+            catch
+            {
+
+                MessageBox.Show("网络错误。请退出软件重新连接");
+                return;
+            }
+
+        }
 
 
     }

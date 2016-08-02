@@ -45,5 +45,20 @@ namespace auexpress.Service
             return addCount;
         }
 
+        public int delete(Int64 id) {
+            var deleteCount = 0;
+            Dictionary<string, object> dc = new Dictionary<string, object>(); 
+            dc.Add("username", AppGlobal.user.mcaccount);
+            dc.Add("token", AppGlobal.user.token);
+            dc.Add("id", id);
+            var count = network.getApi(url + "smsBatch/delete", dc);
+            var pageCount = count.JsonToObject<AddSmsBatch>();
+            if (pageCount.result)
+            {
+                int.TryParse(pageCount.obj.Value.ToString(), out deleteCount);  
+            }
+            return deleteCount;
+        }
+
     }
 }

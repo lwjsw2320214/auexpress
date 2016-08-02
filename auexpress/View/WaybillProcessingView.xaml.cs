@@ -34,6 +34,15 @@ namespace auexpress.View
             EditExpress edit = new EditExpress();
             edit.ShowDialog();
         }
+         
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var i=0;
+            int.TryParse(state.SelectedIndex.ToString(), out i);
+            waybillProcessingViewModel.SelectItem = i;
+            waybillProcessingViewModel.loadSelect(); 
+        }
 
     }
 }

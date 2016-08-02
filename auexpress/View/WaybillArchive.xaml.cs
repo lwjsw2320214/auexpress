@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -23,6 +24,7 @@ namespace auexpress.View
     {
 
         private WaybillArchiveViewModel waybillArchiveViewModel = new WaybillArchiveViewModel();
+        private delegate void UpdateDelegate();  
 
         public WaybillArchive()
         {
@@ -38,7 +40,9 @@ namespace auexpress.View
         private void showPrint(string serch) {
 
             AppGlobal.serch = serch;
-            Print print = new Print();  
+            Print print = new Print();
+            ThreadPool.QueueUserWorkItem(new WaitCallback(Refresh));
+            this.serch.Text = "";
         }
 
         private void print_Click(object sender, RoutedEventArgs e)
@@ -46,10 +50,17 @@ namespace auexpress.View
             var mySelectedElement = exlist.SelectedItem as ExpressMenuItemViewModel;
             Int64 result = mySelectedElement.Express.iid;
             AppGlobal.iid = result;
-            AppGlobal.serch = null;
-            loadRefresh();
+            AppGlobal.serch = null; 
             Print print = new Print(); 
         }
+
+        private void Refresh(object state)
+        {
+            Thread.Sleep(3000);
+            // UI thread dispatch the event into the event queue Async  
+            this.Dispatcher.BeginInvoke(new UpdateDelegate(loadRefresh));
+
+        } 
 
         private void loadRefresh() {
 

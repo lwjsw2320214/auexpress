@@ -91,7 +91,26 @@ namespace auexpress.model
         /// 总价
         /// </summary>
         public Decimal total { get; set; }
-        
 
+        /// <summary>
+        /// 批次号
+        /// </summary>
+        public string batchNumber { get; set; }
+
+
+        /// <summary>
+        /// 快递人姓名
+        /// </summary>
+        public String csender{get;set;}
+
+        /// <summary>
+        /// 快递地址
+        /// </summary>
+        public String csaddr { get; set; }
+
+        /// <summary>
+        /// 电话
+        /// </summary>
+        public String csphone { get; set; }
     }
 }

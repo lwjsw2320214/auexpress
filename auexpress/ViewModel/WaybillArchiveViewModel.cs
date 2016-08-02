@@ -33,6 +33,19 @@ namespace auexpress.ViewModel
             }
         }
 
+        private string cnum;
+
+        public string Cnum
+        {
+            get { return cnum; }
+            set {
+                cnum = value;
+                this.RaisePropertyChanged("Cnum");
+            }
+        }
+
+       
+
         private int pageCount;
 
         public int PageCount
@@ -70,6 +83,8 @@ namespace auexpress.ViewModel
 
         public DelegateCommand<string> SerchCommand { get; set; }
 
+        public DelegateCommand SerchCnumCommand { get; set; }
+
 
         public WaybillArchiveViewModel()
         {
@@ -79,6 +94,7 @@ namespace auexpress.ViewModel
             this.NextCommand = new DelegateCommand(new Action(NextPage));
             this.LastCommand = new DelegateCommand(new Action(LastPage));
             this.SerchCommand = new DelegateCommand<string>(SerchShow);
+            this.SerchCnumCommand = new DelegateCommand(new Action(SerchCnum));
 
         }
 
@@ -320,6 +336,44 @@ namespace auexpress.ViewModel
                 return;
             }
 
+        }
+
+        public void SerchCnum() {
+            try
+            {
+                this.PageSize = 1;
+
+                Dictionary<string, object> dc = new Dictionary<string, object>();
+                dc.Add("icid", AppGlobal.user.icid);
+                dc.Add("irid", 0);
+                dc.Add("page", this.PageSize);
+                dc.Add("batchId", AppGlobal.SmsBatchId);
+                dc.Add("username", AppGlobal.user.mcaccount);
+                dc.Add("token", AppGlobal.user.token);
+                dc.Add("cnum", this.Cnum);
+                var Count = waybillProcessingService.GetPage(dc);
+                this.ExpressMenu = new List<ExpressMenuItemViewModel>();
+                if (Count.result)
+                {
+                    foreach (var item in Count.obj)
+                    {
+
+                        ExpressMenuItemViewModel mv = new ExpressMenuItemViewModel();
+
+                        mv.Express = item;
+
+                        this.ExpressMenu.Add(mv);
+                    }
+                    this.PageSize = Count.page;
+                    this.PageCount = Count.pageCount;
+                }
+            }
+            catch
+            {
+
+                MessageBox.Show("网络错误。请退出软件重新连接");
+                return;
+            }
         }
 
     }

@@ -51,5 +51,25 @@ namespace auexpress.View
             WaybillArchive waybillArchive = new WaybillArchive(); 
             waybillArchive.ShowDialog(); 
         }
+
+        private void delete_Click(object sender, RoutedEventArgs e)
+        {
+            var mySelectedElement = exlist.SelectedItem as ManageExpressMenuItemViewModel;
+
+            Int64 result = mySelectedElement.SmsBatch.id;
+            var count= manageExpressViewModel.delete(result);
+            if (count == 0)
+            {
+
+                MessageBox.Show("删除失败，请检查当前批次号下面是否有运单！");
+            }
+            else {
+                 
+                MessageBox.Show("删除成功！");
+                manageExpressViewModel.RefreshView();
+
+            }
+            
+        }
     }
 }

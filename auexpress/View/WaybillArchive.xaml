@@ -15,6 +15,9 @@
                 <KeyBinding  Key="Enter" Command="{Binding SerchCommand}"  CommandParameter="{Binding Path=Text, RelativeSource={RelativeSource AncestorType={x:Type TextBox}}}"/>
             </TextBox.InputBindings>
         </TextBox>
+        <Label HorizontalAlignment="Left"  VerticalAlignment="Center" Margin="210,0,0,0">运单号：</Label>
+        <TextBox Width="180" Height="30" HorizontalAlignment="Left" Margin="260,0,0,0" Text="{Binding Cnum}"/>
+        <Button Width="50" Height="30" HorizontalAlignment="Left" Margin="450,0,0,0" Command="{Binding SerchCnumCommand}">搜索</Button>
         <DataGrid Grid.Row="1" x:Name="exlist"  ItemsSource="{Binding ExpressMenu}"  IsReadOnly="True" HorizontalAlignment="Center"  AutoGenerateColumns="False" GridLinesVisibility="All" CanUserDeleteRows="False" CanUserAddRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="序号" Binding="{Binding Express.iid}" Width="10*"></DataGridTextColumn>
@@ -22,14 +25,14 @@
                 <DataGridTextColumn Header="快递类别" Binding="{Binding Express.cemskind}" Width="10*"></DataGridTextColumn>
                 <DataGridTextColumn Header="运单号" Binding="{Binding Express.cnum}" Width="10*"></DataGridTextColumn>
                 <DataGridTextColumn Header="目的地" Binding="{Binding Express.cdes}" Width="10*"></DataGridTextColumn>
-                <DataGridTextColumn Header="中文品名" Binding="{Binding Express.cgoods}" Width="10*"></DataGridTextColumn>
+                <DataGridTextColumn Header="中文品名" Binding="{Binding Express.cgoods}" Width="20*"></DataGridTextColumn>
                 <DataGridTextColumn Header="重量(kg)" Binding="{Binding Express.fweight}" Width="10*"></DataGridTextColumn>
                 <DataGridTextColumn Header="收货人" Binding="{Binding Express.creceiver}" Width="10*"></DataGridTextColumn>
                 <DataGridTextColumn Header="收货电话" Binding="{Binding Express.cphone}" Width="10*"></DataGridTextColumn>
                 <DataGridTextColumn Header="收货人详细地址" Binding="{Binding Express.caddr}" Width="10*"></DataGridTextColumn>
                 <DataGridTextColumn Header="收件省份" Binding="{Binding Express.cprovince}" Width="10*"></DataGridTextColumn>
                 <DataGridTextColumn Header="收件城市" Binding="{Binding Express.ccity}" Width="10*"></DataGridTextColumn>
-                <DataGridTextColumn Header="总运费" Binding="{Binding Express.total}"  Width="10*"></DataGridTextColumn>
+                <!--<DataGridTextColumn Header="总运费" Binding="{Binding Express.total}"  Width="10*"></DataGridTextColumn>-->
                 <DataGridTemplateColumn Header="操作" SortMemberPath="" Width="10*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

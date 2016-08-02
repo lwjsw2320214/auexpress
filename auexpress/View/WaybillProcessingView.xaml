@@ -13,6 +13,14 @@
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
         <Button Command="{Binding EditCommand}" Width="50" Height="20" HorizontalAlignment="Left">添加运单</Button>
+        <ComboBox x:Name="state" Width="150" Height="20" 
+                   ItemsSource="{Binding SelectStateMenu}"
+                  SelectedItem="{Binding SelectState}"
+                  DisplayMemberPath="SelectState.ItemName"
+                  SelectedValuePath="SelectState.ItemId"
+                  HorizontalAlignment="Left" Margin="60,0,0,0" SelectionChanged="ComboBox_SelectionChanged"> 
+        </ComboBox>
+
         <DataGrid Grid.Row="1" x:Name="exlist"  ItemsSource="{Binding ExpressMenu}"  IsReadOnly="True" HorizontalAlignment="Center"  AutoGenerateColumns="False" GridLinesVisibility="All" CanUserDeleteRows="False" CanUserAddRows="False">
             <DataGrid.Columns> 
                 <DataGridTextColumn Header="序号" Binding="{Binding Express.iid}" Width="10*"></DataGridTextColumn>
@@ -27,8 +35,8 @@
                 <DataGridTextColumn Header="收货人详细地址" Binding="{Binding Express.caddr}" Width="10*"></DataGridTextColumn>
                 <DataGridTextColumn Header="收件省份" Binding="{Binding Express.cprovince}" Width="10*"></DataGridTextColumn>
                 <DataGridTextColumn Header="收件城市" Binding="{Binding Express.ccity}" Width="10*"></DataGridTextColumn>
-                <DataGridTextColumn Header="总运费" Binding="{Binding Express.total}"  Width="10*"></DataGridTextColumn>
-                <DataGridTemplateColumn Header="操作" SortMemberPath="" Width="10*">
+                <DataGridTextColumn Header="批次号" Binding="{Binding Express.batchNumber}"  Width="10*"></DataGridTextColumn>
+                <!--<DataGridTemplateColumn Header="操作" SortMemberPath="" Width="10*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Grid>
@@ -42,7 +50,7 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                     
-                </DataGridTemplateColumn>
+                </DataGridTemplateColumn>-->
             </DataGrid.Columns>
         </DataGrid>
         <DockPanel Grid.Row="2">

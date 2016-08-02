@@ -10,7 +10,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
-            <RowDefinition/>
+            <RowDefinition MinHeight="80"/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
         <Button Grid.Row="0" Command="{Binding AddCommand}" Width="70" Height="30" HorizontalAlignment="Left">添加批次</Button>
@@ -24,8 +24,9 @@
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition/> 
-                                </Grid.ColumnDefinitions> 
-                                <Button Grid.Column="0" x:Name="print" HorizontalAlignment="Center" Width="100" Click="print_Click">录入运单</Button>
+                                </Grid.ColumnDefinitions>
+                                <Button Grid.Column="0" x:Name="delete" HorizontalAlignment="Left" Width="50" Click="delete_Click">删除</Button>
+                                <Button Grid.Column="0" x:Name="print" HorizontalAlignment="Left" Width="50" Click="print_Click" Margin="60,0,0,0">录入运单</Button>
                             </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

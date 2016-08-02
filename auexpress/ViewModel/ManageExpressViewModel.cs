@@ -299,5 +299,13 @@ namespace auexpress.ViewModel
             }
 
         }
+
+        public int delete(Int64 id) {
+
+           var count= smsBatchService.delete(id);
+
+           return count;
+
+        }
     }
 }

@@ -82,7 +82,7 @@ namespace auexpress.ViewModel
                     this.printMenu.Express = obj.obj;
                     this.printMenu.Express.dsysdate = DateTime.Parse(this.printMenu.Express.dsysdate).ToString("yyyy-MM-dd");
                     this.Addressee = "姓名：" + this.printMenu.Express.creceiver + " " + this.printMenu.Express.cphone + " 地址：" + this.printMenu.Express.caddr;
-                    this.TheSender = "姓名：" + AppGlobal.user.csender + " " + AppGlobal.user.cphone + " 地址：" + AppGlobal.user.caddr;
+                    this.TheSender = "姓名：" + this.printMenu.Express.csender + " " + this.printMenu.Express.csphone + " 地址：" + this.printMenu.Express.csaddr;
                 }
 
             }
