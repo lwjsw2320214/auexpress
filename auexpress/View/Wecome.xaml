@@ -10,9 +10,17 @@
         <Style x:Key="fontStyle">
             <Setter Property="TextElement.FontFamily" Value="Resources/font#微软雅黑"/>
             <Setter Property="TextElement.FontSize" Value="14"/>
-        </Style>
+        </Style> 
     </Page.Resources>
     <Grid>
-        <Label HorizontalAlignment="Center" Style="{DynamicResource fontStyle}">欢迎使用澳速通国际速运，运单客户端管理系统</Label>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock xml:space="preserve" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource fontStyle}">
+            欢迎使用澳速通国际速运，运单客户端管理系统 &#x0a;
+           <Label Foreground="Red">1、运单数据请在客户网站后台进行上传并获取运单号</Label>&#x0a;
+            <Label Foreground="Red">2、已发货运单数据将会自动转到已发货列表，且不在本软件内进行显示，如有需要请及时导出备份。</Label>&#x0a;
+            <Label Foreground="Red">3、软件会持续进行更新完善，如有问题或需求欢迎联系我公司。</Label>
+        </TextBlock>
     </Grid>
 </Page>

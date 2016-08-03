@@ -43,8 +43,7 @@ namespace auexpress.View
             this.printBox.Width = width; 
             var height = 0d;
             double.TryParse(ConfigurationManager.AppSettings["height"], out height);
-            this.printBox.Width = height; 
-            this.printBox.Height = 0d;
+            this.printBox.Height = height;  
             var left = 0d;
             double.TryParse(ConfigurationManager.AppSettings["left"],out left); 
             var top =0d;
@@ -64,21 +63,19 @@ namespace auexpress.View
                     printBarCode(printViewModel.PrintMenu.Express.cnum);
                     ChangeText();
                     PrintDialog pd = new PrintDialog();
-                    pd.PrintVisual(printBox, "test");
+                    pd.PrintVisual(printBox, "运单打印");
                     this.Close();
                 }
                 else {
                     SoundPlayer sp = new SoundPlayer("Resources/6579.wav");
-                    sp.Play();
-                    MessageBox.Show("打印错误！");
+                    sp.Play(); 
                     this.Close();
                 }
                 // this.printViewModel.barCodeEvent += new PrintViewModel.barCodeDelegate(printBarCode); 
             }
             catch {
                 SoundPlayer sp = new SoundPlayer("Resources/6579.wav");
-                sp.Play();
-                MessageBox.Show("打印错误！");
+                sp.Play(); 
                 this.Close();
             }
             

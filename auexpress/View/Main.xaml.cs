@@ -4,6 +4,7 @@ using auexpress.ViewModel;
 using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -44,6 +45,13 @@ namespace auexpress.View
         {
 
             this.mainCount.Content = new ManageExpress();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Process pc = new Process();
+            pc.StartInfo.FileName = "http://www.au-express.com/help.htm";
+            pc.Start();
         }
     }
 }

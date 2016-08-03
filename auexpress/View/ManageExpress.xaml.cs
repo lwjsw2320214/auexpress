@@ -1,5 +1,6 @@
 ﻿using auexpress.model;
 using auexpress.ViewModel;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -70,6 +71,12 @@ namespace auexpress.View
 
             }
             
+        }
+
+        private void download_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog sf = new SaveFileDialog();
+            sf.ShowDialog();
         }
     }
 }

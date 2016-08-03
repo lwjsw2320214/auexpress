@@ -112,5 +112,10 @@ namespace auexpress.model
         /// 电话
         /// </summary>
         public String csphone { get; set; }
+
+        /// <summary>
+        /// 备注
+        /// </summary>
+        public string cmemo { get; set; }
     }
 }

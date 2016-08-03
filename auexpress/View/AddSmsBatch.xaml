@@ -4,7 +4,8 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         Title="添加批次号" Height="120" Width="300"
         ResizeMode="NoResize" 
-        WindowStartupLocation="CenterScreen" BorderBrush="#D1EEEE" >
+        WindowStartupLocation="CenterScreen" BorderBrush="#D1EEEE"
+                      Icon="/auexpress;component/Resources/logo.png">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>

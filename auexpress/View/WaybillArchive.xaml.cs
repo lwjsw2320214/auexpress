@@ -29,6 +29,7 @@ namespace auexpress.View
         public WaybillArchive()
         {
             InitializeComponent();
+            this.serch.Focus();
             this.DataContext = waybillArchiveViewModel;
             this.waybillArchiveViewModel.printEvent += new WaybillArchiveViewModel.printDelegate(showPrint); 
         }
@@ -43,6 +44,7 @@ namespace auexpress.View
             Print print = new Print();
             ThreadPool.QueueUserWorkItem(new WaitCallback(Refresh));
             this.serch.Text = "";
+            this.serch.Focus();
         }
 
         private void print_Click(object sender, RoutedEventArgs e)
@@ -51,7 +53,8 @@ namespace auexpress.View
             Int64 result = mySelectedElement.Express.iid;
             AppGlobal.iid = result;
             AppGlobal.serch = null; 
-            Print print = new Print(); 
+            Print print = new Print();
+            this.serch.Focus();
         }
 
         private void Refresh(object state)

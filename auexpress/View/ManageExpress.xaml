@@ -18,7 +18,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="批次号" Binding="{Binding SmsBatch.batchNumber}" Width="30*"></DataGridTextColumn>
                 <DataGridTextColumn Header="录入日期" Binding="{Binding SmsBatch.createDate,StringFormat='yyyy-MM-dd'}" Width="100"></DataGridTextColumn>
-                <DataGridTemplateColumn Header="操作" SortMemberPath="" Width="160">
+                <DataGridTemplateColumn Header="操作" SortMemberPath="" Width="200">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Grid>
@@ -27,6 +27,7 @@
                                 </Grid.ColumnDefinitions>
                                 <Button Grid.Column="0" x:Name="delete" HorizontalAlignment="Left" Width="50" Click="delete_Click">删除</Button>
                                 <Button Grid.Column="0" x:Name="print" HorizontalAlignment="Left" Width="50" Click="print_Click" Margin="60,0,0,0">录入运单</Button>
+                                <Button Grid.Column="0" x:Name="download" HorizontalAlignment="Left" Width="50" Click="download_Click" Margin="120,0,0,0">录入运单</Button>
                             </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
