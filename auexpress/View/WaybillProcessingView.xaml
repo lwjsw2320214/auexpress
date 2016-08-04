@@ -12,7 +12,7 @@
             <RowDefinition/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
-        <Button Command="{Binding EditCommand}" Width="50" Height="20" HorizontalAlignment="Left">添加运单</Button>
+        <!--<Button Command="{Binding EditCommand}" Width="50" Height="20" HorizontalAlignment="Left">添加运单</Button>-->
         <ComboBox x:Name="state" Width="150" Height="20" 
                    ItemsSource="{Binding SelectStateMenu}"
                   SelectedItem="{Binding SelectState}"

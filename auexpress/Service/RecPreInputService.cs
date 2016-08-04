@@ -26,5 +26,17 @@ namespace auexpress.Service
 
         }
 
+        public RecPreInputPage getAllBatcrRec()
+        { 
+            Dictionary<string, object> dc = new Dictionary<string, object>(); 
+            dc.Add("username", AppGlobal.user.mcaccount);
+            dc.Add("token", AppGlobal.user.token);
+            dc.Add("batchId", AppGlobal.SmsBatchId);
+            var pageCount = network.getApi(url + "recPreInput/getAllBatcrRec", dc);
+            var count = pageCount.JsonToObject<RecPreInputPage>();
+            return count;
+
+        }
+
     }
 }
