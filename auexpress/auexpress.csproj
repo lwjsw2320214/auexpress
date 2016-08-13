@@ -200,9 +200,9 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Resources\Template.xls">
+    <EmbeddedResource Include="Resources\Template.xls">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </EmbeddedResource>
     <Resource Include="Resources\font\MSYH.TTC">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

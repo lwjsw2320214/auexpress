@@ -21,6 +21,7 @@ namespace auexpress.model
         /// id
         /// </summary>
         public static Int64 iid;
+         
 
     }
 }

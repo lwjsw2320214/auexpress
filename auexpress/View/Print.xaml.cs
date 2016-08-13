@@ -8,6 +8,7 @@ using System.Linq;
 using System.Media;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -29,10 +30,10 @@ namespace auexpress.View
     /// </summary>
     public partial class Print : MetroWindow
     {
+        private delegate void UpdateDelegate();
 
-        //定义委托
-        public delegate void ChangeTextHandler();
-        public event ChangeTextHandler ChangeTextEvent;
+        public delegate void ResetInput();
+        public event ResetInput ResetInputEvent;
 
         private PrintViewModel printViewModel = new PrintViewModel();   
         public Print()
@@ -61,10 +62,9 @@ namespace auexpress.View
                     SoundPlayer sp = new SoundPlayer("Resources/6063.wav");
                     sp.Play();
                     printBarCode(printViewModel.PrintMenu.Express.cnum);
-                    ChangeText();
-                    PrintDialog pd = new PrintDialog();
-                    pd.PrintVisual(printBox, "运单打印");
-                    this.Close();
+
+                    ThreadPool.QueueUserWorkItem(new WaitCallback(pt));
+                     
                 }
                 else {
                     SoundPlayer sp = new SoundPlayer("Resources/6579.wav");
@@ -103,11 +103,24 @@ namespace auexpress.View
             barcode_t_text.Text = Contents;
         }
 
-        private void ChangeText() {
+        private void pt(object state)
+        {
+            Thread.Sleep(2000);
+            // UI thread dispatch the event into the event queue Async  
+            this.Dispatcher.BeginInvoke(new UpdateDelegate(prints));
 
-            if (ChangeTextEvent != null) {
+        }
 
-                ChangeTextEvent();
+        public void prints() {
+            PrintDialog pd = new PrintDialog();
+            pd.PrintVisual(printBox, "运单打印");
+            this.Close();
+            TiggerResetInput();
+        }
+
+        public void TiggerResetInput() {
+            if (ResetInputEvent != null) { 
+                ResetInputEvent();
             }
         }
          

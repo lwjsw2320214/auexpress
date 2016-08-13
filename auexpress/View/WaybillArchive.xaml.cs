@@ -40,21 +40,36 @@ namespace auexpress.View
         /// <param name="serch"></param>
         private void showPrint(string serch) {
 
-            AppGlobal.serch = serch;
-            Print print = new Print();
-            ThreadPool.QueueUserWorkItem(new WaitCallback(Refresh));
-            this.serch.Text = "";
-            this.serch.Focus();
+            try
+            {
+                AppGlobal.serch = serch;
+                Print print = new Print(); 
+                print.Show();
+                print.ResetInputEvent += new Print.ResetInput(ResetInput);
+                ThreadPool.QueueUserWorkItem(new WaitCallback(Refresh));
+            }
+            catch {
+                this.serch.Text = "";
+                this.serch.Focus();
+            }
+            
         }
 
         private void print_Click(object sender, RoutedEventArgs e)
         {
-            var mySelectedElement = exlist.SelectedItem as ExpressMenuItemViewModel;
-            Int64 result = mySelectedElement.Express.iid;
-            AppGlobal.iid = result;
-            AppGlobal.serch = null; 
-            Print print = new Print();
-            this.serch.Focus();
+            try
+            {
+                var mySelectedElement = exlist.SelectedItem as ExpressMenuItemViewModel;
+                Int64 result = mySelectedElement.Express.iid;
+                AppGlobal.iid = result;
+                AppGlobal.serch = null;
+                Print print = new Print();
+                print.Show();
+            }
+            catch {
+                this.serch.Focus();
+            }
+            
         }
 
         private void Refresh(object state)
@@ -66,8 +81,13 @@ namespace auexpress.View
         } 
 
         private void loadRefresh() {
-
             waybillArchiveViewModel.refresh();
+        }
+
+        private void ResetInput() {
+            this.serch.Text = "";
+            this.serch.Focus();
+
         }
     }
 }
