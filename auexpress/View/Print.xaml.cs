@@ -62,7 +62,6 @@ namespace auexpress.View
                     SoundPlayer sp = new SoundPlayer("Resources/6063.wav");
                     sp.Play();
                     printBarCode(printViewModel.PrintMenu.Express.cnum);
-
                     ThreadPool.QueueUserWorkItem(new WaitCallback(pt));
                      
                 }
@@ -105,7 +104,9 @@ namespace auexpress.View
 
         private void pt(object state)
         {
-            Thread.Sleep(2000);
+            var ti = 0;
+            int.TryParse(ConfigurationManager.AppSettings["startTime"], out ti);
+            Thread.Sleep(ti);
             // UI thread dispatch the event into the event queue Async  
             this.Dispatcher.BeginInvoke(new UpdateDelegate(prints));
 
