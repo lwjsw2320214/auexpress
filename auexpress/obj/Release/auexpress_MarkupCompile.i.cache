@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-G:\auexpress\auexpress\auexpress\obj\Release\
+E:\project\auexpress\auexpress\obj\Release\
 auexpress
 none
 false
 TRACE
-G:\auexpress\auexpress\auexpress\App.xaml
+E:\project\auexpress\auexpress\App.xaml
 102113194544
 2566984279
-49912394216
-27-981838339
+49655642514
+29-837101995
 View\AddSmsBatch.xaml;View\EditExpress.xaml;View\EditInfo.xaml;View\Login.xaml;View\Main.xaml;View\ManageExpress.xaml;View\Print.xaml;View\WaybillArchive.xaml;View\WaybillProcessingView.xaml;View\Wecome.xaml;
 
 False
