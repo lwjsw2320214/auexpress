@@ -54,11 +54,20 @@ namespace auexpress.View
             var bottom = 0d;
             double.TryParse(ConfigurationManager.AppSettings["bottom"], out bottom);
             this.printBox.Margin = new Thickness(left, top, right, bottom);
+            
             this.DataContext = printViewModel;
+           
             try
             {
                 if (null != printViewModel.PrintMenu.Express)
                 {
+                    if (printViewModel.PrintMenu.Express.cemskind == "圆通快递")
+                    {
+                        this.backImg.ImageSource = new BitmapImage(new Uri(@"Resources\printback\YT.png", UriKind.Relative));
+                    }
+                    else {
+                        this.backImg.ImageSource = new BitmapImage(new Uri(@"Resources\printback\AU.png", UriKind.Relative));
+                    }
                     SoundPlayer sp = new SoundPlayer("Resources/6063.wav");
                     sp.Play();
                     printBarCode(printViewModel.PrintMenu.Express.cnum);

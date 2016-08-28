@@ -8,6 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/login/main06.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/printback/au.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/printback/yt.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/6063.wav")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/6579.wav")]
 

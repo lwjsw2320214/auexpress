@@ -211,15 +211,15 @@
     <EmbeddedResource Include="Resources\Template.xls">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <Resource Include="Resources\font\MSYH.TTC">
+    <EmbeddedResource Include="Resources\font\MSYH.TTC">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\font\MSYHBD.TTC">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\font\MSYHBD.TTC">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\font\MSYHL.TTC">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\font\MSYHL.TTC">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -269,9 +269,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\login\main06.png">
+    <Content Include="Resources\login\main06.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\logo.png" />
@@ -299,9 +299,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\AU.png">
+    <Content Include="Resources\printback\AU.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
+    <Content Include="Resources\printback\YT.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\6063.wav">

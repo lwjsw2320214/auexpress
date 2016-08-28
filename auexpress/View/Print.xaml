@@ -9,7 +9,7 @@
     <Grid Height="575" Width="370">
         <Grid  x:Name="printBox" VerticalAlignment="Top" HorizontalAlignment="Left" Width="360" Height="575">
             <Grid.Background>
-                <ImageBrush ImageSource="/Resources/AU.png" Viewport="0,0,1,1" />
+                <ImageBrush x:Name="backImg" Viewport="0,0,1,1" />
             </Grid.Background>
             <Grid.RowDefinitions>
                 <!--logo-->
