@@ -120,6 +120,7 @@ namespace auexpress.View
                         row.CreateCell(10).SetCellValue(item.fweight.ToString());
                         row.CreateCell(12).SetCellValue(item.cgoods);
                         row.CreateCell(14).SetCellValue(item.iitem);
+                        row.CreateCell(21).SetCellValue(item.cmemo);
                         rowIndex++;
                     }
                     sheet.ForceFormulaRecalculation = true;

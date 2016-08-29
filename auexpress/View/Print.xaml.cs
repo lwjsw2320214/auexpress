@@ -64,9 +64,11 @@ namespace auexpress.View
                     if (printViewModel.PrintMenu.Express.cemskind == "圆通快递")
                     {
                         this.backImg.ImageSource = new BitmapImage(new Uri(@"Resources\printback\YT.png", UriKind.Relative));
+                        this.cdes.FontSize = 16;
                     }
                     else {
                         this.backImg.ImageSource = new BitmapImage(new Uri(@"Resources\printback\AU.png", UriKind.Relative));
+                        this.cdes.FontSize = 23;
                     }
                     SoundPlayer sp = new SoundPlayer("Resources/6063.wav");
                     sp.Play();

@@ -38,7 +38,7 @@
             </Grid.ColumnDefinitions>
             <Image x:Name="barcode" Grid.Column="0" Grid.Row="1"  Width="230" Height="40" HorizontalAlignment="Left" Margin="6,5,0,20"/>
             <TextBlock x:Name="barcode_text" Grid.Column="0" Grid.Row="1"  Margin="14,47,0,5" Height="20" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16"  FontWeight="Bold"/>
-            <Label Grid.Column="1" Grid.Row="1" Margin="0,23,0,3" FontSize="23" VerticalAlignment="Center" Height="40" Content="{Binding PrintMenu.Express.cdes}"></Label>
+            <Label Grid.Column="1" Grid.Row="1" Margin="0,23,0,3"  x:Name="cdes" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Content="{Binding PrintMenu.Express.cdes}"></Label>
             <Label Grid.Column="0" Grid.Row="2" Margin="40,0,0,0" VerticalAlignment="Center" FontWeight="Bold" Height="25" Content="{Binding PrintMenu.Express.cnum}"></Label>
             <TextBlock  Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Margin="30,5,0,4" FontWeight="Bold" Height="16" Text="{Binding PrintMenu.Express.dsysdate}"></TextBlock>
             <TextBlock  Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Margin="45,5,8,5" FontWeight="Bold" TextWrapping="Wrap" FontSize="12" Text="{Binding Addressee}"></TextBlock>
