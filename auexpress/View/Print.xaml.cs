@@ -64,9 +64,15 @@ namespace auexpress.View
                     if (printViewModel.PrintMenu.Express.cemskind == "圆通快递")
                     {
                         this.backImg.ImageSource = new BitmapImage(new Uri(@"Resources\printback\YT.png", UriKind.Relative));
+                        this.titleadd.Content = printViewModel.PrintMenu.Express.cdes;
                         this.cdes.FontSize = 16;
                     }
-                    else {
+                    else if (printViewModel.PrintMenu.Express.cemskind == "顺丰快递") {
+                        this.backImg.ImageSource = new BitmapImage(new Uri(@"Resources\printback\SF.png", UriKind.Relative));
+                        this.cdes.FontSize = 23;
+                    }
+                    else
+                    {
                         this.backImg.ImageSource = new BitmapImage(new Uri(@"Resources\printback\AU.png", UriKind.Relative));
                         this.cdes.FontSize = 23;
                     }
@@ -127,7 +133,7 @@ namespace auexpress.View
             PrintDialog pd = new PrintDialog();
             pd.PrintVisual(printBox, "运单打印");
             this.Close();
-            TiggerResetInput();
+            TiggerResetInput(); 
         }
 
         public void TiggerResetInput() {

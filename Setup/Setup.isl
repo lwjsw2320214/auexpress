@@ -340,24 +340,24 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>ICSharpCode.SharpZipLib.dll</td><td>{878242CD-D48E-4558-8869-C5C9DE0F02DB}</td><td>INSTALLDIR</td><td>2</td><td/><td>icsharpcode.sharpziplib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ICSharpCode.SharpZipLib.dll</td><td>{6408A374-B062-488F-8385-8AD3DE9DCE60}</td><td>INSTALLDIR</td><td>2</td><td/><td>icsharpcode.sharpziplib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{209B4544-6B94-4E0E-9BB8-BBEA51D94C1A}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{1147DF93-5BAA-4AFE-8969-2B372B2C8119}</td><td>RESOURCES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{072379FB-1AC5-4252-8DA3-3F4830275DE4}</td><td>FONT</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{8B75D755-CE7B-449F-B9B4-79BA266AB4B4}</td><td>LOGIN</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{D49437DB-F0A0-4F81-9E96-97E921C19224}</td><td>PRINTBACK</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>MahApps.Metro.dll</td><td>{AE63BC23-EA13-409B-A0A3-B1DEF534F3B9}</td><td>INSTALLDIR</td><td>2</td><td/><td>mahapps.metro.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Practices.Prism.Interactivity.dll</td><td>{05DBA1B2-B5E2-4A55-9813-B18DA402A4B3}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.practices.prism.in</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Practices.Prism.dll</td><td>{CB0F93DE-7C41-4AB9-AF0B-B263E9D32DA8}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.practices.prism.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Practices.ServiceLocation.dll</td><td>{FB57C1F7-4EF9-49CF-8632-C189F8535B3A}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.practices.servicel</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NPOI.OOXML.dll</td><td>{6D411590-ECAF-48DC-B5BF-15B699EC181F}</td><td>INSTALLDIR</td><td>2</td><td/><td>npoi.ooxml.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NPOI.OpenXml4Net.dll</td><td>{EE9C0453-3C74-4D41-B528-71E81ADC4944}</td><td>INSTALLDIR</td><td>2</td><td/><td>npoi.openxml4net.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NPOI.OpenXmlFormats.dll</td><td>{4D3F70CF-0F51-4F85-A2C3-7AB706B80678}</td><td>INSTALLDIR</td><td>2</td><td/><td>npoi.openxmlformats.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NPOI.dll</td><td>{DDAE5BF6-75F4-4365-B1A4-132BE371C5DD}</td><td>INSTALLDIR</td><td>2</td><td/><td>npoi.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Windows.Interactivity.dll</td><td>{3DDEBF9A-9C5C-4A7E-A936-B84F0274EE5B}</td><td>INSTALLDIR</td><td>2</td><td/><td>system.windows.interactivity</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>auexpress.exe</td><td>{6501FCCF-61DD-4986-B60B-A7C37470A92D}</td><td>INSTALLDIR</td><td>2</td><td/><td>auexpress.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>zxing.dll</td><td>{241AE317-118F-4282-82DB-918FB730C694}</td><td>INSTALLDIR</td><td>2</td><td/><td>zxing.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>zxing.presentation.dll</td><td>{9485625B-9E08-4285-910E-F3178D574573}</td><td>INSTALLDIR</td><td>2</td><td/><td>zxing.presentation.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{C85BA941-A971-4C0C-8B51-B4C27CBC830B}</td><td>RESOURCES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{E87FC501-7CC4-479D-94A7-C8F7B94F258A}</td><td>FONT</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{8172EC12-1A59-4725-9C79-A993AAF05202}</td><td>LOGIN</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{42B68027-B729-4D04-8A26-D0DDA54D400F}</td><td>PRINTBACK</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MahApps.Metro.dll</td><td>{F830AA67-6456-4B2F-ABBE-6AD32C6EBF92}</td><td>INSTALLDIR</td><td>2</td><td/><td>mahapps.metro.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Practices.Prism.Interactivity.dll</td><td>{06C1E224-7D8A-45DA-BE83-5B535BC24A70}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.practices.prism.in</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Practices.Prism.dll</td><td>{C5507852-5F97-4307-935E-493257320CD4}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.practices.prism.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Practices.ServiceLocation.dll</td><td>{61E24AD7-5E89-4326-AC35-AA0CC967C5A7}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.practices.servicel</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NPOI.OOXML.dll</td><td>{94BD973C-5C0A-4702-9C6A-E05348E8AEB1}</td><td>INSTALLDIR</td><td>2</td><td/><td>npoi.ooxml.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NPOI.OpenXml4Net.dll</td><td>{DEABA49F-4FE2-4558-9A73-F56D15D9DFE0}</td><td>INSTALLDIR</td><td>2</td><td/><td>npoi.openxml4net.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NPOI.OpenXmlFormats.dll</td><td>{0B5B2636-49F7-40D5-9393-9129D46475EA}</td><td>INSTALLDIR</td><td>2</td><td/><td>npoi.openxmlformats.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NPOI.dll</td><td>{1E4D0AE1-1935-495F-8F3E-9AFEE2BB9067}</td><td>INSTALLDIR</td><td>2</td><td/><td>npoi.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Windows.Interactivity.dll</td><td>{AADC714F-FC17-4483-B867-1C46F556163F}</td><td>INSTALLDIR</td><td>2</td><td/><td>system.windows.interactivity</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>auexpress.exe</td><td>{C68F3868-CB52-4629-8D43-D190C7B58342}</td><td>INSTALLDIR</td><td>2</td><td/><td>auexpress.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>zxing.dll</td><td>{AAE08A00-0C05-48E4-A9F1-A378AE5BFB5A}</td><td>INSTALLDIR</td><td>2</td><td/><td>zxing.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>zxing.presentation.dll</td><td>{F532B240-8567-4B20-A469-6AE65F96D9EF}</td><td>INSTALLDIR</td><td>2</td><td/><td>zxing.presentation.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1213,7 +1213,9 @@
 		<row><td>WindowsFolder</td><td>TARGETDIR</td><td>.:Windows</td><td/><td>0</td><td/></row>
 		<row><td>WindowsVolume</td><td>TARGETDIR</td><td>.:WinRoot</td><td/><td>0</td><td/></row>
 		<row><td>company_name</td><td>ProgramMenuFolder</td><td>澳速通~1|澳速通国际速运</td><td/><td>1</td><td/></row>
+		<row><td>company_name1</td><td>ProgramMenuFolder</td><td>公司名称</td><td/><td>1</td><td/></row>
 		<row><td>product_name</td><td>company_name</td><td>澳速通~1|澳速通国际速运</td><td/><td>1</td><td/></row>
+		<row><td>product_name1</td><td>company_name1</td><td>澳速通~1|澳速通国际速运</td><td/><td>1</td><td/></row>
 	</table>
 
 	<table name="DrLocator">
@@ -1937,32 +1939,35 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>_063.wav</td><td>ISX_DEFAULTCOMPONENT1</td><td>6063.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\Resources\6063.wav</td><td>1</td><td/></row>
-		<row><td>_579.wav</td><td>ISX_DEFAULTCOMPONENT1</td><td>6579.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\Resources\6579.wav</td><td>1</td><td/></row>
-		<row><td>au.png</td><td>ISX_DEFAULTCOMPONENT4</td><td>AU.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\Resources\printback\AU.png</td><td>1</td><td/></row>
+		<row><td>_063.wav</td><td>ISX_DEFAULTCOMPONENT1</td><td>6063.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\Resources\6063.wav</td><td>1</td><td/></row>
+		<row><td>_579.wav</td><td>ISX_DEFAULTCOMPONENT1</td><td>6579.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\Resources\6579.wav</td><td>1</td><td/></row>
+		<row><td>arialbd.ttf</td><td>ISX_DEFAULTCOMPONENT2</td><td>arialbd.ttf</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\Resources\font\arialbd.ttf</td><td>1</td><td/></row>
+		<row><td>au.png</td><td>ISX_DEFAULTCOMPONENT4</td><td>AU.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\Resources\printback\AU.png</td><td>1</td><td/></row>
 		<row><td>auexpress.exe</td><td>auexpress.exe</td><td>AUEXPR~1.EXE|auexpress.exe</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\auexpress.exe</td><td>1</td><td/></row>
 		<row><td>auexpress.exe.config</td><td>ISX_DEFAULTCOMPONENT</td><td>AUEXPR~1.CON|auexpress.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\auexpress.exe.config</td><td>1</td><td/></row>
 		<row><td>icsharpcode.sharpziplib.dll</td><td>ICSharpCode.SharpZipLib.dll</td><td>ICSHAR~1.DLL|ICSharpCode.SharpZipLib.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\ICSharpCode.SharpZipLib.dll</td><td>1</td><td/></row>
+		<row><td>logo.png</td><td>ISX_DEFAULTCOMPONENT1</td><td>logo.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\Resources\logo.png</td><td>1</td><td/></row>
 		<row><td>mahapps.metro.dll</td><td>MahApps.Metro.dll</td><td>MAHAPP~1.DLL|MahApps.Metro.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\MahApps.Metro.dll</td><td>1</td><td/></row>
 		<row><td>mahapps.metro.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>MAHAPP~1.XML|MahApps.Metro.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\MahApps.Metro.xml</td><td>1</td><td/></row>
-		<row><td>main06.png</td><td>ISX_DEFAULTCOMPONENT3</td><td>main06.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\Resources\login\main06.png</td><td>1</td><td/></row>
+		<row><td>main06.png</td><td>ISX_DEFAULTCOMPONENT3</td><td>main06.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\Resources\login\main06.png</td><td>1</td><td/></row>
 		<row><td>microsoft.practices.prism.dl</td><td>Microsoft.Practices.Prism.dll</td><td>MICROS~1.DLL|Microsoft.Practices.Prism.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\Microsoft.Practices.Prism.dll</td><td>1</td><td/></row>
 		<row><td>microsoft.practices.prism.in</td><td>Microsoft.Practices.Prism.Interactivity.dll</td><td>MICROS~1.DLL|Microsoft.Practices.Prism.Interactivity.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\Microsoft.Practices.Prism.Interactivity.dll</td><td>1</td><td/></row>
 		<row><td>microsoft.practices.prism.in1</td><td>ISX_DEFAULTCOMPONENT</td><td>MICROS~1.XML|Microsoft.Practices.Prism.Interactivity.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\Microsoft.Practices.Prism.Interactivity.xml</td><td>1</td><td/></row>
 		<row><td>microsoft.practices.prism.xm</td><td>ISX_DEFAULTCOMPONENT</td><td>MICROS~1.XML|Microsoft.Practices.Prism.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\Microsoft.Practices.Prism.xml</td><td>1</td><td/></row>
 		<row><td>microsoft.practices.servicel</td><td>Microsoft.Practices.ServiceLocation.dll</td><td>MICROS~1.DLL|Microsoft.Practices.ServiceLocation.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\Microsoft.Practices.ServiceLocation.dll</td><td>1</td><td/></row>
 		<row><td>microsoft.practices.servicel1</td><td>ISX_DEFAULTCOMPONENT</td><td>MICROS~1.XML|Microsoft.Practices.ServiceLocation.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\Microsoft.Practices.ServiceLocation.xml</td><td>1</td><td/></row>
-		<row><td>msyh.ttc</td><td>ISX_DEFAULTCOMPONENT2</td><td>MSYH.TTC</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\Resources\font\MSYH.TTC</td><td>1</td><td/></row>
-		<row><td>msyhbd.ttc</td><td>ISX_DEFAULTCOMPONENT2</td><td>MSYHBD.TTC</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\Resources\font\MSYHBD.TTC</td><td>1</td><td/></row>
-		<row><td>msyhl.ttc</td><td>ISX_DEFAULTCOMPONENT2</td><td>MSYHL.TTC</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\Resources\font\MSYHL.TTC</td><td>1</td><td/></row>
+		<row><td>msyh.ttc</td><td>ISX_DEFAULTCOMPONENT2</td><td>MSYH.TTC</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\Resources\font\MSYH.TTC</td><td>1</td><td/></row>
+		<row><td>msyhbd.ttc</td><td>ISX_DEFAULTCOMPONENT2</td><td>MSYHBD.TTC</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\Resources\font\MSYHBD.TTC</td><td>1</td><td/></row>
+		<row><td>msyhl.ttc</td><td>ISX_DEFAULTCOMPONENT2</td><td>MSYHL.TTC</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\Resources\font\MSYHL.TTC</td><td>1</td><td/></row>
 		<row><td>npoi.dll</td><td>NPOI.dll</td><td>NPOI.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\NPOI.dll</td><td>1</td><td/></row>
 		<row><td>npoi.ooxml.dll</td><td>NPOI.OOXML.dll</td><td>NPOIOO~1.DLL|NPOI.OOXML.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\NPOI.OOXML.dll</td><td>1</td><td/></row>
 		<row><td>npoi.openxml4net.dll</td><td>NPOI.OpenXml4Net.dll</td><td>NPOIOP~1.DLL|NPOI.OpenXml4Net.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\NPOI.OpenXml4Net.dll</td><td>1</td><td/></row>
 		<row><td>npoi.openxmlformats.dll</td><td>NPOI.OpenXmlFormats.dll</td><td>NPOIOP~1.DLL|NPOI.OpenXmlFormats.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\NPOI.OpenXmlFormats.dll</td><td>1</td><td/></row>
 		<row><td>npoi.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>NPOI.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\NPOI.xml</td><td>1</td><td/></row>
+		<row><td>sf.png</td><td>ISX_DEFAULTCOMPONENT4</td><td>SF.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\Resources\printback\SF.png</td><td>1</td><td/></row>
 		<row><td>system.windows.interactivity</td><td>System.Windows.Interactivity.dll</td><td>SYSTEM~1.DLL|System.Windows.Interactivity.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\System.Windows.Interactivity.dll</td><td>1</td><td/></row>
-		<row><td>template.xls</td><td>ISX_DEFAULTCOMPONENT1</td><td>Template.xls</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\Resources\Template.xls</td><td>1</td><td/></row>
-		<row><td>yt.png</td><td>ISX_DEFAULTCOMPONENT4</td><td>YT.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\Resources\printback\YT.png</td><td>1</td><td/></row>
+		<row><td>template.xls</td><td>ISX_DEFAULTCOMPONENT1</td><td>Template.xls</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\Resources\Template.xls</td><td>1</td><td/></row>
+		<row><td>yt.png</td><td>ISX_DEFAULTCOMPONENT4</td><td>YT.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\Resources\printback\YT.png</td><td>1</td><td/></row>
 		<row><td>zxing.dll</td><td>zxing.dll</td><td>zxing.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\zxing.dll</td><td>1</td><td/></row>
 		<row><td>zxing.presentation.dll</td><td>zxing.presentation.dll</td><td>ZXINGP~1.DLL|zxing.presentation.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\zxing.presentation.dll</td><td>1</td><td/></row>
 		<row><td>zxing.presentation.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>ZXINGP~1.XML|zxing.presentation.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\project\auexpress\auexpress\bin\Release\zxing.presentation.xml</td><td>1</td><td/></row>
@@ -1977,6 +1982,7 @@
 	<table name="Font">
 		<col key="yes" def="s72">File_</col>
 		<col def="S128">FontTitle</col>
+		<row><td>arialbd.ttf</td><td/></row>
 		<row><td>msyh.ttc</td><td/></row>
 		<row><td>msyhbd.ttc</td><td/></row>
 		<row><td>msyhl.ttc</td><td/></row>
@@ -2112,24 +2118,24 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>ICSharpCode.SharpZipLib.dll</td><td/><td/><td>_AE5D3702_459C_4FED_AA0F_FB62771E485E_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ICSharpCode.SharpZipLib.dll</td><td/><td/><td>_90348CF6_8FF1_4EE0_90E4_26B87AA78DC3_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_1F1688F9_3165_42DE_A071_23EC6F32E6CD_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_7813269D_F89E_45BC_98F0_06D69C54043B_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_F26D9998_2A6A_455B_80B2_56E8BCF33AAB_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_2EBB5A6C_E1E0_481D_913D_8A419B6770F4_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT4</td><td/><td/><td>_0A466B84_687F_4BFA_B5B7_274671C263DF_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>MahApps.Metro.dll</td><td/><td/><td>_E98CB729_AD48_4A27_BD48_0FAF75982701_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Practices.Prism.Interactivity.dll</td><td/><td/><td>_82246BB5_532C_4C1A_8797_3C56C600B7C2_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Practices.Prism.dll</td><td/><td/><td>_7E737194_D652_47C0_A5E3_2EA6A8EB3F0B_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Practices.ServiceLocation.dll</td><td/><td/><td>_1130E122_DFA4_429A_A399_2DCFFC407C2D_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NPOI.OOXML.dll</td><td/><td/><td>_5E01255A_543D_4DA0_9982_682F705B8A08_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NPOI.OpenXml4Net.dll</td><td/><td/><td>_BA6B4FD0_3CA8_48A6_8DB5_EAA5613F2854_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NPOI.OpenXmlFormats.dll</td><td/><td/><td>_4BFF595C_F41A_4362_AB3B_D94DBFF469E9_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NPOI.dll</td><td/><td/><td>_CED99BBB_1977_4B96_A762_A7C126BDADA1_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Windows.Interactivity.dll</td><td/><td/><td>_55311EEB_485D_4373_A698_90CF75E73BEC_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>auexpress.exe</td><td/><td/><td>_ED4FFA14_3B37_4517_AB0F_147F091E5DCA_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>zxing.dll</td><td/><td/><td>_F9402303_DA15_4DC8_9BFA_1C07D208D4C3_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>zxing.presentation.dll</td><td/><td/><td>_B9FB6C2B_6CA0_4F58_9D6E_2A7DDD23E931_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_658660F8_EA1B_4B4B_A225_0F1005B4E204_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_EDCC3046_CD91_49A5_A645_6A4D2482C4C4_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_1631C445_B147_4532_A569_3EA245210B5A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT4</td><td/><td/><td>_E7290BCA_AC9E_4006_AC07_15CB801A4E53_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MahApps.Metro.dll</td><td/><td/><td>_856EDD03_5278_487A_96AC_787CDD6C4F91_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Practices.Prism.Interactivity.dll</td><td/><td/><td>_8A0728CB_5675_440F_82B6_51F0FF098119_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Practices.Prism.dll</td><td/><td/><td>_93FD77C9_0A74_4CE5_AF48_D15917335DEF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Practices.ServiceLocation.dll</td><td/><td/><td>_B0EEC79A_9504_475A_9A77_DEBDF28FDA1C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NPOI.OOXML.dll</td><td/><td/><td>_24E1E28E_71C8_43E5_B2E0_786901EFE10D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NPOI.OpenXml4Net.dll</td><td/><td/><td>_4D9A18F5_6E4D_45F4_9F3A_02A45707865E_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NPOI.OpenXmlFormats.dll</td><td/><td/><td>_A0D2BC94_A505_4312_976B_08116D5054FB_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NPOI.dll</td><td/><td/><td>_8DF4649D_9B41_4DB4_BBD9_6F9E50E6AEAD_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Windows.Interactivity.dll</td><td/><td/><td>_10B5E8AA_FCE5_452B_9804_AF4813F1EA37_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>auexpress.exe</td><td/><td/><td>_D349D0BA_804E_4853_A5C8_77BC922DD5B2_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>zxing.dll</td><td/><td/><td>_7E2FBBF4_4475_4FA9_90DA_1ED8033104FC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>zxing.presentation.dll</td><td/><td/><td>_8537A589_48B5_4272_94E9_30C54EF06EB0_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2722,7 +2728,7 @@
 		<col def="I4">TimeStamp</col>
 		<row><td>COMPANY_NAME</td><td>1033</td><td>Nom de votre société</td><td>0</td><td/><td>-467370609</td></row>
 		<row><td>COMPANY_NAME</td><td>1036</td><td>Ihr Firmenname</td><td>0</td><td/><td>-467366513</td></row>
-		<row><td>COMPANY_NAME</td><td>2052</td><td>公司名称</td><td>0</td><td/><td>-467366513</td></row>
+		<row><td>COMPANY_NAME</td><td>2052</td><td>澳速通国际速运</td><td>0</td><td/><td>2091182955</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Toujours installer</td><td>0</td><td/><td>-467370609</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1036</td><td>Immer installieren</td><td>0</td><td/><td>-467366513</td></row>
 		<row><td>DN_AlwaysInstall</td><td>2052</td><td>始终安装</td><td>0</td><td/><td>-467366513</td></row>
@@ -5165,6 +5171,18 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td>澳速通国际物流.exe</td><td>0</td><td/><td>-467370609</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1036</td><td>澳速通国际物流.exe</td><td>0</td><td/><td>-467366513</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>2052</td><td>澳速通国际物流.exe</td><td>0</td><td/><td>-467366513</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME10</td><td>1031</td><td/><td>0</td><td/><td>2091166187</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME10</td><td>1033</td><td/><td>0</td><td/><td>2091166187</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME10</td><td>1036</td><td/><td>0</td><td/><td>2091166187</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME10</td><td>2052</td><td>LAUNCH~1.EXE|Launch auexpress.vshost.exe</td><td>0</td><td/><td>2091166187</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME11</td><td>1031</td><td/><td>0</td><td/><td>2091131403</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME11</td><td>1033</td><td/><td>0</td><td/><td>2091131403</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME11</td><td>1036</td><td/><td>0</td><td/><td>2091131403</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME11</td><td>2052</td><td>澳速通国际速运</td><td>0</td><td/><td>2091127627</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME12</td><td>1031</td><td/><td>0</td><td/><td>2091131403</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME12</td><td>1033</td><td/><td>0</td><td/><td>2091131403</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME12</td><td>1036</td><td/><td>0</td><td/><td>2091131403</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME12</td><td>2052</td><td>LAUNCH~1.EXE|Launch auexpress.vshost.exe</td><td>0</td><td/><td>2091131403</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>LAUNCH~1.EXE|Launch auexpress.vshost.exe</td><td>0</td><td/><td>-467370609</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1036</td><td>LAUNCH~1.EXE|Launch auexpress.vshost.exe</td><td>0</td><td/><td>-467366513</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>2052</td><td>LAUNCH~1.EXE|Launch auexpress.vshost.exe</td><td>0</td><td/><td>-467366513</td></row>
@@ -5174,6 +5192,26 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td>LAUNCH~1.EXE|Launch auexpress.vshost.exe</td><td>0</td><td/><td>-467370609</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1036</td><td>LAUNCH~1.EXE|Launch auexpress.vshost.exe</td><td>0</td><td/><td>-467366513</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>2052</td><td>LAUNCH~1.EXE|Launch auexpress.vshost.exe</td><td>0</td><td/><td>-467366513</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>1031</td><td/><td>0</td><td/><td>2091173995</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>1033</td><td/><td>0</td><td/><td>2091173995</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>1036</td><td/><td>0</td><td/><td>2091173995</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>2052</td><td>LAUNCH~1.EXE|Launch auexpress.exe</td><td>0</td><td/><td>2091173995</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>1031</td><td/><td>0</td><td/><td>2091173995</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>1033</td><td/><td>0</td><td/><td>2091173995</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>1036</td><td/><td>0</td><td/><td>2091173995</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>2052</td><td>LAUNCH~1.EXE|Launch auexpress.vshost.exe</td><td>0</td><td/><td>2091173995</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>1031</td><td/><td>0</td><td/><td>2091126955</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>1033</td><td/><td>0</td><td/><td>2091126955</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>1036</td><td/><td>0</td><td/><td>2091126955</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>2052</td><td>LAUNCH~1.EXE|Launch auexpress.exe</td><td>0</td><td/><td>2091126955</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>1031</td><td/><td>0</td><td/><td>2091126955</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>1033</td><td/><td>0</td><td/><td>2091126955</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>1036</td><td/><td>0</td><td/><td>2091126955</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>2052</td><td>LAUNCH~1.EXE|Launch auexpress.vshost.exe</td><td>0</td><td/><td>2091126955</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>1031</td><td/><td>0</td><td/><td>2091162091</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>1033</td><td/><td>0</td><td/><td>2091162091</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>1036</td><td/><td>0</td><td/><td>2091162091</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>2052</td><td>LAUNCH~1.EXE|Launch auexpress.exe</td><td>0</td><td/><td>2091162091</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>Sélectionnez le serveur de bases de données cible dans la liste des serveurs ci-dessous.</td><td>0</td><td/><td>-467370609</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1036</td><td>Wählen Sie aus der untenstehenden Liste der Server den Datenbank-Server aus, den Sie als Ziel verwenden möchten.</td><td>0</td><td/><td>-467366513</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>2052</td><td>从以下服务器列表中选择要连接的数据库服务器。</td><td>0</td><td/><td>-467366513</td></row>
@@ -6040,16 +6078,20 @@
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>2052</td><td>对于运行 [ProductName] 屏幕分辨率不足。</td><td>0</td><td/><td>-467366513</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td>http://www.au-express.com/</td><td>0</td><td/><td>-467370609</td></row>
 		<row><td>ID_STRING1</td><td>1036</td><td>http://www.au-express.com/</td><td>0</td><td/><td>-467366513</td></row>
-		<row><td>ID_STRING1</td><td>2052</td><td>http://www.au-express.com/</td><td>0</td><td/><td>-467366513</td></row>
+		<row><td>ID_STRING1</td><td>2052</td><td>http://www.au-express.com/</td><td>0</td><td/><td>2091129835</td></row>
 		<row><td>ID_STRING2</td><td>1033</td><td>澳速通国际速运</td><td>0</td><td/><td>-467370609</td></row>
 		<row><td>ID_STRING2</td><td>1036</td><td>澳速通国际速运</td><td>0</td><td/><td>-467366513</td></row>
-		<row><td>ID_STRING2</td><td>2052</td><td>澳速通国际速运</td><td>0</td><td/><td>-467366513</td></row>
+		<row><td>ID_STRING2</td><td>2052</td><td>澳速通国际速运</td><td>0</td><td/><td>2091182955</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>澳速通国际物流.exe</td><td>0</td><td/><td>-467370609</td></row>
 		<row><td>ID_STRING3</td><td>1036</td><td>澳速通国际物流.exe</td><td>0</td><td/><td>-467366513</td></row>
 		<row><td>ID_STRING3</td><td>2052</td><td>澳速通国际物流.exe</td><td>0</td><td/><td>-467366513</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>澳速通国际物流</td><td>0</td><td/><td>-467370609</td></row>
 		<row><td>ID_STRING4</td><td>1036</td><td>澳速通国际物流</td><td>0</td><td/><td>-467366513</td></row>
 		<row><td>ID_STRING4</td><td>2052</td><td>澳速通国际物流</td><td>0</td><td/><td>-467366513</td></row>
+		<row><td>ID_STRING5</td><td>1031</td><td>LAUNCH~1.EXE|Launch auexpress.exe</td><td>0</td><td/><td>2091147787</td></row>
+		<row><td>ID_STRING5</td><td>1033</td><td>LAUNCH~1.EXE|Launch auexpress.exe</td><td>0</td><td/><td>2091147787</td></row>
+		<row><td>ID_STRING5</td><td>1036</td><td>LAUNCH~1.EXE|Launch auexpress.exe</td><td>0</td><td/><td>2091147787</td></row>
+		<row><td>ID_STRING5</td><td>2052</td><td>LAUNCH~1.EXE|Launch auexpress.exe</td><td>0</td><td/><td>2091147787</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>La fonction ne sera pas installée.</td><td>0</td><td/><td>-467370609</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1036</td><td>Dieses Feature wird nicht installiert.</td><td>0</td><td/><td>-467366513</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>2052</td><td>系统将不安装此功能。</td><td>0</td><td/><td>-467366513</td></row>
@@ -6168,8 +6210,17 @@
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
 		<row><td>auexpress.exe1_196F7F56D02141AC8695F0BD29414BD5.exe</td><td/><td>E:\project\auexpress\auexpress\bin\Release\auexpress.exe</td><td>0</td></row>
 		<row><td>auexpress.exe1_F838A7E1F97743878E6D66C526B70143.exe</td><td/><td>E:\project\auexpress\auexpress\bin\Release\auexpress.exe</td><td>0</td></row>
+		<row><td>auexpress.exe1_FC9FE737150C4E49AD658B68936A12B5.exe</td><td/><td>E:\project\auexpress\auexpress\bin\Release\auexpress.exe</td><td>0</td></row>
 		<row><td>auexpress.exe_3C58B30A86B54E86864B83FE8C556EAF.exe</td><td/><td>E:\project\auexpress\auexpress\bin\Release\auexpress.exe</td><td>0</td></row>
+		<row><td>auexpress.exe_49776CA5AA4E4D8E8DA1548999B71328.exe</td><td/><td>E:\project\auexpress\auexpress\bin\Release\auexpress.exe</td><td>0</td></row>
+		<row><td>auexpress.exe_6202375665684C0AB2EC7B9B33AFFA87.exe</td><td/><td>E:\project\auexpress\auexpress\bin\Release\auexpress.exe</td><td>0</td></row>
+		<row><td>auexpress.exe_7C6F4AF2896B4E61B594C653CCCAC126.exe</td><td/><td>E:\project\auexpress\auexpress\bin\Release\auexpress.exe</td><td>0</td></row>
+		<row><td>auexpress.exe_7EB151EB740E4FEDAD4881EDADF62942.exe</td><td/><td>E:\project\auexpress\auexpress\bin\Release\auexpress.exe</td><td>0</td></row>
 		<row><td>auexpress.exe_CC24D662D7F848BC99CD0B3D57CDD52E.exe</td><td/><td>E:\project\auexpress\auexpress\bin\Release\auexpress.exe</td><td>0</td></row>
+		<row><td>auexpress.vshost.e_18DC82FEB61947FD9F1EE49224B4BCA0.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>auexpress.vshost.e_7D64E2B214AD4FF09C710D490D723EB0.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>auexpress.vshost.e_8AF9AD5E0D284CA0A71A4FDDB7AC0E18.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>auexpress.vshost.e_B441F751813647BC97EB0A71F4C8964A.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">
@@ -6677,7 +6728,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>ProductCode</td><td>{B4FC1E2A-7D27-4572-A5C9-77667D61B0DB}</td><td/></row>
 		<row><td>ProductName</td><td>澳速通国际速运</td><td/></row>
-		<row><td>ProductVersion</td><td>1.00.0000</td><td/></row>
+		<row><td>ProductVersion</td><td>1.00.0002</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -6753,7 +6804,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
-		<row><td>auexpress.exe</td><td>auexpress.exe</td><td/><td>product_name</td><td>2</td></row>
+		<row><td>auexpress.exe</td><td>auexpress.exe</td><td/><td>product_name1</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -6839,8 +6890,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>auexpress.exe</td><td>product_name</td><td>##IDS_SHORTCUT_DISPLAY_NAME3##</td><td>auexpress.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>auexpress.exe_CC24D662D7F848BC99CD0B3D57CDD52E.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>auexpress.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME3##</td><td>auexpress.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>auexpress.exe1_F838A7E1F97743878E6D66C526B70143.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>auexpress.exe</td><td>product_name1</td><td>##IDS_SHORTCUT_DISPLAY_NAME11##</td><td>auexpress.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>auexpress.exe_49776CA5AA4E4D8E8DA1548999B71328.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>auexpress.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME11##</td><td>auexpress.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>auexpress.exe1_FC9FE737150C4E49AD658B68936A12B5.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">

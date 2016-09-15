@@ -37,6 +37,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Image x:Name="barcode" Grid.Column="0" Grid.Row="1"  Width="230" Height="40" HorizontalAlignment="Left" Margin="6,5,0,20"/>
+            <Label x:Name="titleadd" FontSize="30" FontWeight="Bold" Grid.Column="0"  VerticalAlignment="Center" FontFamily="/Resources/font/#arialbd" Grid.Row="0" Height="40" HorizontalAlignment="Right" Width="200" Grid.ColumnSpan="2"  Content="" />
             <TextBlock x:Name="barcode_text" Grid.Column="0" Grid.Row="1"  Margin="14,47,0,5" Height="20" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16"  FontWeight="Bold"/>
             <Label Grid.Column="1" Grid.Row="1" Margin="0,23,0,3"  x:Name="cdes" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Content="{Binding PrintMenu.Express.cdes}"></Label>
             <Label Grid.Column="0" Grid.Row="2" Margin="40,0,0,0" VerticalAlignment="Center" FontWeight="Bold" Height="25" Content="{Binding PrintMenu.Express.cnum}"></Label>
